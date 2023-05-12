@@ -99,6 +99,10 @@ a {
 
 /*Screen Responsiveness */
 @media only screen and (max-width: 768px) {
+   :host{
+    display: flex;
+    justify-content: center;
+   }
     .menu {
         display: none;
         z-index: 2;
@@ -163,6 +167,7 @@ a {
         -ms-transform: rotate(45deg);
         -o-transform: rotate(45deg);
         transform: rotate(45deg);
+        z-index: 111;
       }
      
       .hamburger.active .line{
@@ -187,12 +192,15 @@ a {
         transform: translateY(-13px) rotate(90deg);
       }
 
-
+img{
+    width: 18px;;
+}
     .header {
-        padding: 0 3px;
+width: 95vw;
         height: 7vh;
         flex-direction: row;
         align-items: center;
+        justify-content: space-evenly;
     }
 }
 
