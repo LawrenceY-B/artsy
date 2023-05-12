@@ -1,0 +1,28 @@
+<header class="header" #header>
+  
+  <div><h1>Artsy.</h1></div>
+
+  <div
+    class="hamburger"
+    id="hamburger-9"
+    (click)="toggleMenu()"
+    [class.active]="menuOpen"
+  >
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+  </div>
+
+  <div class="menu" [class.active]="menuOpen">
+    <div *ngFor="let nav of navigation">
+      <a [routerLink]="'/' + nav.tag">
+        <p class="header__item" id="underline">{{ nav.name }}</p>
+      </a>
+    </div>
+  </div>
+  <div class="icons">
+    <img src="/assets/svgs/Vector.svg" alt="notification" />
+    <img src="/assets/svgs/Vector-2.svg" alt="cart" />
+    <img src="/assets/svgs/Vector-1.svg" alt="search" />
+  </div>
+</header>

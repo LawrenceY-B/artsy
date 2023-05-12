@@ -1,0 +1,15 @@
+
+.circle {
+   
+    border: 2px solid rgba(252, 250, 250, 0.606);
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: rgb(129, 135, 255);
+    z-index: 9999;
+    pointer-events: none;
+    transition: transform 0.2s ease-out;
+    mix-blend-mode: difference;
+
+  }

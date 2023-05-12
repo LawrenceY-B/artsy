@@ -3,14 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './modules/product/pages/home/home/home.component';
+import { ProductcardComponent } from './modules/product/components/productcard/productcard.component';
+import { FilterComponent } from './modules/product/components/filter/filter.component';
+import { HeaderComponent } from './modules/product/components/header/header.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

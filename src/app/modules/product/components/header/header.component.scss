@@ -1,0 +1,206 @@
+// *{
+//     border: 1px dashed red;
+// }
+.header {
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    font-size: 32px;
+}
+a {
+    color: var(--textcolor);
+
+    text-decoration: none;
+}
+
+.menu, .icons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    width: 30%;
+    justify-content: space-between;
+
+    p {
+        color: var(--textcolor);
+        font-size: 1rem;
+    }
+    p:active{
+        text-decoration: underline;
+          background-color: yellow;
+  
+      }
+      #underline {
+        /* 	display:inline-block; */
+        position: relative;
+
+    }
+
+    #underline:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        height: 2px;
+        width: 0;
+        transition: width .5s ease;
+    }
+
+    #underline:after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: -5px;
+        height: 2px;
+        width: 0;
+        background: rgb(255, 110, 21);
+        transition: width .5s ease;
+    }
+
+    #underline:hover:before {
+        width: 80%;
+        background: rgb(255, 110, 21);
+        transition: width .5s ease;
+    }
+
+    #underline:hover:after {
+        width: 80%;
+        background: transparent;
+        transition: all 0s ease;
+    }
+
+}
+.icons{
+    width: 10%;
+}
+
+
+/*Screen Responsiveness */
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+  
+  .hamburger:hover{
+    cursor: pointer;
+  }
+
+
+/*Screen Responsiveness */
+@media only screen and (max-width: 768px) {
+    .menu {
+        display: none;
+        z-index: 2;
+        position: absolute;
+        top: 40px;
+        left: 0px;
+        width: 100vw;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        
+    }
+
+    .menu.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        height: 45%;
+        transition: all 2s ease-in;
+        transform: translate(-0%,10%);
+
+    
+
+    }
+
+    .menu.active::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 1;
+        filter: blur(0.4rem);
+        transition: all 2s ease-in;
+        transform: scale(1.17);
+    }
+    .hamburger .line{
+        width: 30px;
+        height: 5px;
+        background-color: #000000;
+        display: block;
+        margin: 4px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        z-index: 999!important;
+      }
+    
+      .hamburger{
+        display: block;
+        margin-right: 20px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+      }
+      
+      .hamburger.active{
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+     
+      .hamburger.active .line{
+        width: 30px;
+      }
+      
+      .hamburger.active .line:nth-child(2){
+        opacity: 0;
+      }
+      
+      .hamburger.active .line:nth-child(1){
+        -webkit-transform: translateY(6.5px);
+        -ms-transform: translateY(6.5px);
+        -o-transform: translateY(6.5px);
+        transform: translateY(6.5px);
+      }
+      
+      .hamburger.active .line:nth-child(3){
+        -webkit-transform: translateY(-13px) rotate(90deg);
+        -ms-transform: translateY(-13px) rotate(90deg);
+        -o-transform: translateY(-13px) rotate(90deg);
+        transform: translateY(-13px) rotate(90deg);
+      }
+
+
+    .header {
+        padding: 0 3px;
+        height: 7vh;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+// @media only screen and (max-width: 768px) {
+
+
+//     .header{
+//         padding: 0px;
+//         height: 7vh;
+//     }
+// }

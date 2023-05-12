@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "CD Light";
+  src: url("assets/fonts/clashdisplay/ClashDisplay-Light.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "CD ELight";
+  src: url("assets/fonts/clashdisplay/ClashDisplay-Extralight.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "CD Regular";
+  src: url("assets/fonts/clashdisplay/ClashDisplay-Regular.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "CD Medium";
+  src: url("assets/fonts/clashdisplay/ClashDisplay-Medium.otf")
+    format("opentype");
+}
+@font-face {
+    font-family: "CD SemiBold";
+    src: url("assets/fonts/clashdisplay/ClashDisplay-Semibold.otf") format("opentype");
+  }
+@font-face {
+  font-family: "CD Bold";
+  src: url("assets/fonts/clashdisplay/ClashDisplay-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Satoshi Regular";
+  src: url("assets/fonts/Satoshi/Satoshi-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Satoshi Light";
+  src: url("assets/fonts/Satoshi/Satoshi-Light.otf") format("opentype");
+}
+.dark-theme {
+  --background: hsl(235, 21%, 11%);
+  --textcolor: hsl(0, 0%, 93%);
+}
+.light-theme {
+  --background: hsl(0, 0%, 98%);
+  --textcolor: hsl(0, 0%, 16%);
+}
+body{
+    overflow-x: hidden;
+}
+*{
+    mix-blend-mode: normal;
+    margin: 0;
+    font-family: "Satoshi Regular";
+    cursor:none  ;
+
+        // border: 1px dashed red;
+  
+}
