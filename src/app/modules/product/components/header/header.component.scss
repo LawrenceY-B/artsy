@@ -1,7 +1,8 @@
 // *{
 //     border: 1px dashed red;
 // }
-.header {
+.header {  background-color: #fff;
+height: 10vh;
     display: flex;
     width: 100vw;
     flex-direction: row;
@@ -19,6 +20,7 @@ a {
 }
 
 .menu, .icons {
+
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -203,7 +205,10 @@ width: 95vw;
         justify-content: space-evenly;
     }
 }
-
+.active{ text-decoration: underline;
+text-decoration-color: var(--textcolor);
+text-underline-offset: 8px;}
+  
 // @media only screen and (max-width: 768px) {
 
 

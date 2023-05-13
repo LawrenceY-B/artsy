@@ -5,7 +5,8 @@ main,
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  .section1 {
+  .section1 {      background-color: white;
+
     justify-content: space-evenly;
     margin: 10px 0px;
     * {
@@ -13,7 +14,6 @@ main,
     }
     h1 {
       font-family: "CD SemiBold";
-      color: var(--textcolor);
       font-size: 72px;
       width: 60%;
       text-align: center;

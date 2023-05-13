@@ -10,7 +10,7 @@ import { ProductComponent } from './product.component';
 const routes: Routes = [
   { path: '', component: ProductComponent, children : [
     {
-      path: '',
+      path: 'home',
       component: HomeComponent,
       title: 'Home Page'
     } ,
@@ -25,7 +25,7 @@ const routes: Routes = [
       title: 'Home details'
     }
   ] },
-  { path: 'home',   redirectTo: '/', pathMatch: 'full'},
+  { path: '',   redirectTo: '/home', pathMatch: 'full'},
 
 
 ];

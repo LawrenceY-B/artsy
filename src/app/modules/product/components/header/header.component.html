@@ -15,7 +15,7 @@
 
   <div class="menu" [class.active]="menuOpen">
     <div *ngFor="let nav of navigation">
-      <a [routerLink]="'/' + nav.tag">
+      <a routerLinkActive="active"  [routerLink]="'/' + nav.tag">
         <p class="header__item" id="underline">{{ nav.name }}</p>
       </a>
     </div>

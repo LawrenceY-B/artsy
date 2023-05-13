@@ -44,14 +44,15 @@
   --textcolor: hsl(0, 0%, 16%);
 }
 body{
+  background-color: var(--background);
     overflow-x: hidden;
 }
-*{
-    mix-blend-mode: normal;
+*{  
+
+
     margin: 0;
     font-family: "Satoshi Regular";
     cursor:none  ;
 
-        border: 1px dashed red;
   
 }
