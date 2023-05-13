@@ -1,83 +1,88 @@
-.container{
-    color: #fff;
+.container {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 30px;
+  margin-top: 60px;
+  height: 80vh;
+  background-image: linear-gradient(
+    99.99deg,
+    #4693ed -26.21%,
+    #79c2d2 22.16%,
+    rgba(192, 86, 9, 0.49) 111.62%
+  );
+  h2 {
+    align-self: flex-start;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    margin-bottom: 30px;
+  }
+  figure {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0px 30px;
-    margin-top: 60px;
-    height:80vh;
-    background-image: linear-gradient(99.99deg, #4693ED -26.21%, #79C2D2 22.16%, rgba(192, 86, 9, 0.49) 111.62%);
-    h2{
-        align-self: flex-start;
-        text-decoration: underline;
-        text-underline-offset: 10px;
-        margin-bottom: 30px;
-    }
-    figure{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 80%;
-        overflow: hidden;
-        position: relative;
+    height: 80%;
+    overflow: hidden;
+    position: relative;
 
-        img{
-            object-fit: cover;
-            object-position: center;
-            // height: %;
-            width: 100%;
-        }
-        .caption{
-            padding: 0px 0px 60px 60px;
-            height: 100%;
-            background-color: #202020cb;
-            backdrop-filter:blur(1px);
-            position: absolute;
-            z-index:9999;
-            display: flex;
-            gap: 20px;
-            flex-direction: column;
-            justify-content: flex-end;
-            
-            h6{
-                font-family: 'Times New Roman', Times, serif;
-width: 20%;
-                font-size: 16px;
-            }
-            span{
-                gap: 20px;
-                align-items: center;
-                display: inline-flex;
-            }
-            .start{
-                font-family: 'Satoshi Light';
-            }
-            h3{
-                font-family: 'Times New Roman', Times, serif;
-                font-size: 32px;
-            }
-            div{
-                width: 100%;
-                display: flex;
-                gap: 150px;
-                text-align: justify;
-                span{
-                    width: 60%;
-                   p{
-                    text-decoration: underline;
-                    text-underline-offset: 3px;
-                   }
-                }
-                button{
-                    padding: 5px 15px;
-                    border: 1px solid #fff;
-                    border-radius:10px;
-                    background-color: transparent;
-                    color: #fff;
-                }
-            }
-        }
+    img {
+      object-fit: cover;
+      object-position: center;
+      // height: %;
+      width: 100%;
     }
+    .caption {
+      padding: 0px 0px 60px 60px;
+      height: 100%;
+      background-color: #202020cb;
+      backdrop-filter: blur(1px);
+      position: absolute;
+      z-index: 9999;
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      h6 {
+        font-family: "Times New Roman", Times, serif;
+        width: 20%;
+        font-size: 16px;
+      }
+      span {
+        gap: 20px;
+        align-items: center;
+        display: inline-flex;
+      }
+      .start {
+        font-family: "Satoshi Light";
+      }
+      h3 {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 32px;
+      }
+      div {
+        width: 100%;
+        display: flex;
+        gap: 150px;
+        text-align: justify;
+        span {
+          width: 60%;
+          p {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+          }
+        }
+        button {
+          padding: 5px 15px;
+          border: 1px solid #fff;
+          border-radius: 10px;
+          background-color: transparent;
+          color: #fff;
+        }
+      }
+    }
+  }
 }
