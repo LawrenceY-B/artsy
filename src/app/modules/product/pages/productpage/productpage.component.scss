@@ -33,21 +33,31 @@ section:nth-child(2) {
     }
     select {
       background-color: #f4f2f2;
-      padding: 10px 12px;
+      padding: 10px 0px;
       border: 1px solid #000;
       border-radius: 5px;
       background-color: transparent;
     }
   }
-  .grid-box{
+  .grid-box {
+    margin-top: 15px;
     padding: 10px;
     display: grid;
+    justify-items: center;
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 10px;
   }
+  button {
+    margin-top: 30px;
+    align-self: center;
+    background-color: transparent;
+    padding: 10px 12px;
+    border: 1px solid #000;
+    border-radius: 5px;
+  }
 }
-*{
-    border:1px dashed red;
-}
+// *{
+//     border:1px dashed red;
+// }
