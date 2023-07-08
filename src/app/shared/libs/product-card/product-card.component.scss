@@ -1,0 +1,57 @@
+.card {
+    height: clamp(300px,350px,400px);
+    width: clamp(200px,300px,400px);
+    background-color: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.02)) drop-shadow(0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852)) drop-shadow(0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481)) drop-shadow(0px 20px 13px rgba(0, 0, 0, 0.01)) drop-shadow(0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185)) drop-shadow(0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481));
+    cursor: pointer;
+
+    article {
+        background-color: #FFFFFF;
+        transition: transform 0.2s ease-out;
+
+
+        .card-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+
+            p {
+                text-transform: capitalize;
+                font-size: 18px;
+                color: #5E6282;
+            }
+        }
+
+        span {
+            padding: 5px 15px;
+            display: flex;
+            gap: 5px;
+
+        }
+    }
+
+    .card-image {
+        height: clamp(200px,250px,300px);
+        width: 100%;
+        object-fit: cover;
+    }
+
+
+
+   
+
+}
+h2{
+    font-family: "Satoshi Regular";
+}
+.price{
+    font-weight: 700;
+}
+@media only screen and (max-width: 768px) {
+    .card{
+        width: 300px;
+    }
+}

@@ -1,65 +1,68 @@
 <aside>
-  <section class="sidebar">
-    <div class="searchbox">
-      <img src="/assets/svgs/Search.svg" alt="" />
-      <input type="search" placeholder="Search" />
-    </div>
-    <span class="header">
-      <img src="/assets/svgs/Settings.svg" alt="" srcset="" />
-      <h2>Filter</h2>
-    </span>
-    <hr />
-    <div class="category">
-      <span
-        ><p>By Category</p>
-        <img
-          src="{{
-            category ? '/assets/images/up.png' : '/assets/images/down.jpg'
-          }}"
-          (click)="displaycat()"
-          alt="Menu icon"
-      /></span>
-      <div class="categorylist" *ngIf="category">
-        <span><input type="checkbox" name="" id="" /> Editorials</span>
-        <span><input type="checkbox" name="" id="" /> Fashion</span>
-        <span><input type="checkbox" name="" id="" /> Optics</span>
-        <span><input type="checkbox" name="" id="" /> Art & Museum</span>
-        <span><input type="checkbox" name="" id="" /> Nature</span>
-      </div>
-    </div>
-    <div class="category">
-        <span
-          ><p>By Price</p>
-          <img
-            src="{{
-              Price ? '/assets/images/up.png' : '/assets/images/down.jpg'
-            }}"
-            (click)="displayprice()"
-            alt="Menu icon"
-        /></span>
-        <div class="categorylist" *ngIf="Price">
-           to be worked on
-              
-        </div>
-      </div>
-      <div class="category">
-        <span
-          ><p>By Artist</p>
-          <img
-            src="{{
-              Artist ? '/assets/images/up.png' : '/assets/images/down.jpg'
-            }}"
-            (click)="displayartist()"
-            alt="Menu icon"
-        /></span>
-        <div class="categorylist" *ngIf="Artist">
-          <span><input type="checkbox" name="" id="" /> Editorials</span>
-          <span><input type="checkbox" name="" id="" /> Fashion</span>
-          <span><input type="checkbox" name="" id="" /> Optics</span>
-          <span><input type="checkbox" name="" id="" /> Art & Museum</span>
-          <span><input type="checkbox" name="" id="" /> Nature</span>
-        </div>
-      </div>
+  <section>
+    <app-filter></app-filter>
   </section>
-  <section></section>
+  <section>
+    <div class="results">
+      <input type="text" />
+
+      <select name="" id="">
+        <option value="" hidden>Sort By</option>
+
+        <option value="">All</option>
+        <option value="">Editorials</option>
+        <option value="">Fashion</option>
+        <option value="">Optics</option>
+        <option value="">Art & Museum</option>
+        <option value="">Nature</option>
+      </select>
+    </div>
+    <div class="grid-box">
+      <app-product-card
+        [ImgUrl]="
+          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
+        "
+      ></app-product-card>
+      <app-product-card
+        [ImgUrl]="
+          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
+        "
+      ></app-product-card
+      ><app-product-card
+        [ImgUrl]="
+          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
+        "
+      ></app-product-card
+      ><app-product-card
+        [ImgUrl]="
+          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
+        "
+      ></app-product-card
+      ><app-product-card
+        [ImgUrl]="
+          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
+        "
+      ></app-product-card
+      ><app-product-card
+        [ImgUrl]="
+          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
+        "
+      ></app-product-card
+      ><app-product-card
+        [ImgUrl]="
+          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
+        "
+      ></app-product-card
+      ><app-product-card
+        [ImgUrl]="
+          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
+        "
+      ></app-product-card
+      ><app-product-card
+        [ImgUrl]="
+          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
+        "
+      ></app-product-card>
+    </div>
+  </section>
 </aside>

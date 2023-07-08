@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ExhibitionCardComponent } from './libs/exhibition-card/exhibition-card.component';
 import { NavCardComponent } from './libs/nav-card/nav-card.component';
 import { FooterComponent } from './libs/footer/footer.component';
+import { ProductCardComponent } from './libs/product-card/product-card.component';
 
 
 
@@ -10,7 +11,8 @@ import { FooterComponent } from './libs/footer/footer.component';
   declarations: [
     ExhibitionCardComponent,
     NavCardComponent,
-    FooterComponent
+    FooterComponent,
+    ProductCardComponent
   ],
   imports: [
     CommonModule
@@ -18,7 +20,8 @@ import { FooterComponent } from './libs/footer/footer.component';
   exports:[
     ExhibitionCardComponent,
     NavCardComponent,
-    FooterComponent
+    FooterComponent,
+    ProductCardComponent
   ]
 })
 export class SharedModule { }

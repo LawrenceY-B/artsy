@@ -8,6 +8,9 @@ import { ProductpageComponent } from './pages/productpage/productpage.component'
 import { DetailComponent } from './pages/detail/detail.component';
 import { ProductcardComponent } from './components/productcard/productcard.component';
 import { ProductComponent } from './product.component';
+import {MatSliderModule} from '@angular/material/slider';
+import { FilterComponent } from './components/filter/filter.component';
+
 
 
 
@@ -21,12 +24,14 @@ import { ProductComponent } from './product.component';
     ProductpageComponent,
     DetailComponent,
     ProductComponent,
+    FilterComponent
 
   ],
   imports: [
     CommonModule,
     SharedModule,
     RoutingModule,
+    MatSliderModule
 
     
   ],
