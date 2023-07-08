@@ -11,6 +11,8 @@ import { ProductComponent } from './product.component';
 
 
 
+
+
 @NgModule({
   declarations: [
     HomeComponent,
@@ -19,11 +21,15 @@ import { ProductComponent } from './product.component';
     ProductpageComponent,
     DetailComponent,
     ProductComponent,
+
   ],
   imports: [
     CommonModule,
     SharedModule,
     RoutingModule,
-  ]
+
+    
+  ],
+ 
 })
 export class ProductModule { }
