@@ -35,6 +35,10 @@
   font-family: "Satoshi Light";
   src: url("assets/fonts/Satoshi/Satoshi-Light.otf") format("opentype");
 }
+@font-face {
+  font-family: "Baskervville";
+  src: url("assets/fonts/Baskervville/Baskervville-Regular.ttf") format("opentype");
+}
 .dark-theme {
   --background: hsl(235, 21%, 11%);
   --textcolor: hsl(0, 0%, 93%);

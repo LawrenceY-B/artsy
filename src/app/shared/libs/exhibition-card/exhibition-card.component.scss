@@ -4,8 +4,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0px 30px;
-  margin-top: 60px;
+  padding: 0px 60px;
+  // margin-top: 60px;
   height: 80vh;
   background-image: linear-gradient(
     99.99deg,
@@ -13,11 +13,18 @@
     #79c2d2 22.16%,
     rgba(192, 86, 9, 0.49) 111.62%
   );
+  .img-container{
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  
   h2 {
     align-self: flex-start;
     text-decoration: underline;
     text-underline-offset: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   figure {
     display: flex;
@@ -85,4 +92,5 @@
       }
     }
   }
+}
 }
