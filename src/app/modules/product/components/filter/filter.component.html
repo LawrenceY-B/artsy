@@ -1,83 +1,165 @@
 <section class="sidebar">
-    <div class="searchbox">
-      <!-- <img src="/src/assets/svgs/Search.svg" alt="search" /> -->
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M19.728 17.2913L15.8332 13.3971C15.6574 13.2214 15.4191 13.1237 15.1691 13.1237H14.5323C15.6105 11.7449 16.2512 10.0107 16.2512 8.12421C16.2512 3.63636 12.6142 0 8.12559 0C3.63698 0 0 3.63636 0 8.12421C0 12.612 3.63698 16.2484 8.12559 16.2484C10.0125 16.2484 11.747 15.6079 13.126 14.5298V15.1665C13.126 15.4165 13.2236 15.6547 13.3994 15.8305L17.2942 19.7246C17.6614 20.0918 18.2552 20.0918 18.6185 19.7246L19.7241 18.6193C20.0913 18.2521 20.0913 17.6584 19.728 17.2913ZM8.12559 13.1237C5.36367 13.1237 3.12523 10.8896 3.12523 8.12421C3.12523 5.36276 5.35977 3.12469 8.12559 3.12469C10.8875 3.12469 13.126 5.35885 13.126 8.12421C13.126 10.8857 10.8914 13.1237 8.12559 13.1237Z" fill="#939393"/>
-        </svg>
-        
-      <input type="search" placeholder="Search" />
-    </div>
-    <span class="header">
-      <img src="/assets/svgs/Settings.svg" alt="filter" />
-      <h2>Filter</h2>
-    </span>
-    <hr />
-    <div class="category">
+  <div class="searchbox">
+    <!-- <img src="/src/assets/svgs/Search.svg" alt="search" /> -->
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M19.728 17.2913L15.8332 13.3971C15.6574 13.2214 15.4191 13.1237 15.1691 13.1237H14.5323C15.6105 11.7449 16.2512 10.0107 16.2512 8.12421C16.2512 3.63636 12.6142 0 8.12559 0C3.63698 0 0 3.63636 0 8.12421C0 12.612 3.63698 16.2484 8.12559 16.2484C10.0125 16.2484 11.747 15.6079 13.126 14.5298V15.1665C13.126 15.4165 13.2236 15.6547 13.3994 15.8305L17.2942 19.7246C17.6614 20.0918 18.2552 20.0918 18.6185 19.7246L19.7241 18.6193C20.0913 18.2521 20.0913 17.6584 19.728 17.2913ZM8.12559 13.1237C5.36367 13.1237 3.12523 10.8896 3.12523 8.12421C3.12523 5.36276 5.35977 3.12469 8.12559 3.12469C10.8875 3.12469 13.126 5.35885 13.126 8.12421C13.126 10.8857 10.8914 13.1237 8.12559 13.1237Z"
+        fill="#939393"
+      />
+    </svg>
+
+    <input type="search" placeholder="Search" />
+  </div>
+  <span class="header">
+    <img src="/assets/svgs/Settings.svg" alt="filter" />
+    <h2>Filter</h2>
+  </span>
+  <hr />
+  <div class="category">
+    <span
+      ><p>By Category</p>
+      <img
+        src="{{
+          category ? '/assets/images/up.png' : '/assets/images/down.jpg'
+        }}"
+        (click)="displaycat()"
+        alt="Menu icon"
+    /></span>
+    <div class="categorylist" *ngIf="category">
       <span
-        ><p>By Category</p>
-        <img
-          src="{{
-            category ? '/assets/images/up.png' : '/assets/images/down.jpg'
-          }}"
-          (click)="displaycat()"
-          alt="Menu icon"
-      /></span>
-      <div class="categorylist" *ngIf="category">
-        <span
-          ><input type="checkbox" name="" id="" />
-          <p>Editorials</p></span
-        >
-        <span
-          ><input type="checkbox" name="" id="" />
-          <p>Fashion</p></span
-        >
-        <span
-          ><input type="checkbox" name="" id="" />
-          <p>Optics</p></span
-        >
-        <span
-          ><input type="checkbox" name="" id="" />
-          <p>Arts & Culture</p></span
-        >
-        <span
-          ><input type="checkbox" name="" id="" />
-          <p>Nature</p></span
-        >
-      </div>
-    </div>
-    <div class="category">
+        ><input type="checkbox" name="" id="" />
+        <p>Editorials</p></span
+      >
       <span
-        ><p>By Price</p>
-        <img
-          src="{{
-            Price ? '/assets/images/up.png' : '/assets/images/down.jpg'
-          }}"
-          (click)="displayprice()"
-          alt="Menu icon"
-      /></span>
-      <div class="categorylist" *ngIf="Price">to be worked on
-        <mat-slider>
-          <input matSliderStartThumb>
-          <input matSliderEndThumb>
-        </mat-slider>
-      </div>
-    </div>
-    <div class="category">
+        ><input type="checkbox" name="" id="" />
+        <p>Fashion</p></span
+      >
       <span
-        ><p>By Artist</p>
-        <img
-          src="{{
-            Artist ? '/assets/images/up.png' : '/assets/images/down.jpg'
-          }}"
-          (click)="displayartist()"
-          alt="Menu icon"
-      /></span>
-      <div class="categorylist" *ngIf="Artist">
-        <span><input type="checkbox" name="" id="" /> Editorials</span>
-        <span><input type="checkbox" name="" id="" /> Fashion</span>
-        <span><input type="checkbox" name="" id="" /> Optics</span>
-        <span><input type="checkbox" name="" id="" /> Art & Museum</span>
-        <span><input type="checkbox" name="" id="" /> Nature</span>
-      </div>
+        ><input type="checkbox" name="" id="" />
+        <p>Optics</p></span
+      >
+      <span
+        ><input type="checkbox" name="" id="" />
+        <p>Arts & Culture</p></span
+      >
+      <span
+        ><input type="checkbox" name="" id="" />
+        <p>Nature</p></span
+      >
     </div>
-  </section>
+  </div>
+  <div class="category">
+    <span
+      ><p>By Price</p>
+      <img
+        src="{{ Price ? '/assets/images/up.png' : '/assets/images/down.jpg' }}"
+        (click)="displayprice()"
+        alt="Menu icon"
+    /></span>
+    <div class="categorylist" *ngIf="Price">
+      to be worked on
+      <mat-slider>
+        <input matSliderStartThumb />
+        <input matSliderEndThumb />
+      </mat-slider>
+    </div>
+  </div>
+  <div class="category">
+    <span
+      ><p>By Artist</p>
+      <img
+        src="{{ Artist ? '/assets/images/up.png' : '/assets/images/down.jpg' }}"
+        (click)="displayartist()"
+        alt="Menu icon"
+    /></span>
+    <div class="categorylist" *ngIf="Artist">
+      <span><input type="checkbox" name="" id="" /> Editorials</span>
+      <span><input type="checkbox" name="" id="" /> Fashion</span>
+      <span><input type="checkbox" name="" id="" /> Optics</span>
+      <span><input type="checkbox" name="" id="" /> Art & Museum</span>
+      <span><input type="checkbox" name="" id="" /> Nature</span>
+    </div>
+  </div>
+  <div class="Year">
+    <span class="yearheader"
+      ><p>By Collection Year</p>
+      <img class="dropdown"
+        src="{{ Year ? '/assets/images/up.png' : '/assets/images/down.jpg' }}"
+        (click)="displayYear()"
+        alt="Menu icon"
+    /></span>
+    <div class="categorylist" *ngIf="Year">
+      <span
+        class="yearoptions"
+        (click)="changerYear1()"
+        [ngClass]="{ 'activeyearoptions': currentYear === 2019 }"
+      >
+        <img
+          src="/assets/svgs/check.svg"
+          class="imgCheck"
+          alt="tick"
+          [ngClass]="{ 'active-year': currentYear === 2019 }"
+        />
+        <p>2019</p></span
+      >
+      <span
+        class="yearoptions"
+        (click)="changerYear2()"
+        [ngClass]="{ 'activeyearoptions': currentYear === 2020 }"
+      >
+        <img
+          src="/assets/svgs/check.svg"
+          class="imgCheck"
+          alt="tick"
+          [ngClass]="{ 'active-year': currentYear === 2020 }"
+        />
+        <p>2020</p></span
+      ><span
+        class="yearoptions"
+        (click)="changerYear3()"
+        [ngClass]="{ 'activeyearoptions': currentYear === 2021 }"
+      >
+        <img
+          src="/assets/svgs/check.svg"
+          class="imgCheck"
+          alt="tick"
+          [ngClass]="{ 'active-year': currentYear === 2021 }"
+        />
+        <p>2021</p></span
+      >
+      <span
+        class="yearoptions"
+        (click)="changerYear4()"
+        [ngClass]="{ 'activeyearoptions': currentYear === 2022 }"
+      >
+        <img
+          src="/assets/svgs/check.svg"
+          class="imgCheck"
+          alt="tick"
+          [ngClass]="{ 'active-year': currentYear === 2022 }"
+        />
+        <p>2022</p></span
+      >
+      
+      <span
+        class="yearoptions"
+        (click)="changerYear5()"
+        [ngClass]="{ 'activeyearoptions': currentYear === 2023 }"
+      >
+        <img
+          src="/assets/svgs/check.svg"
+          class="imgCheck"
+          alt="tick"
+          [ngClass]="{ 'active-year': currentYear === 2023 }"
+        />
+        <p>2023</p></span
+      >
+    </div>
+  </div>
+</section>

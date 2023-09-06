@@ -7,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailComponent implements OnInit {
 
-  constructor() { }
+Info: Boolean = false;
 
+  constructor() { }
+  displayInfo() {
+    this.Info = !this.Info;
+    }
   ngOnInit(): void {
   }
 

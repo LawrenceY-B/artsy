@@ -2,7 +2,8 @@
     height: clamp(300px,350px,400px);
     width: clamp(200px,300px,400px);
     background-color: #fff;
-    border-radius: 30px;
+    border-radius: 15px;
+    padding: 10px;
     overflow: hidden;
     filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.02)) drop-shadow(0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852)) drop-shadow(0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481)) drop-shadow(0px 20px 13px rgba(0, 0, 0, 0.01)) drop-shadow(0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185)) drop-shadow(0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481));
     cursor: pointer;
@@ -16,7 +17,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 15px;
+            padding: 12px 0px;
 
             p {
                 text-transform: capitalize;
@@ -26,7 +27,7 @@
         }
 
         span {
-            padding: 5px 15px;
+            padding: 5px 0px;
             display: flex;
             gap: 5px;
 
@@ -37,6 +38,8 @@
         height: clamp(200px,250px,300px);
         width: 100%;
         object-fit: cover;
+        border-radius: 10px;
+
     }
 
 
