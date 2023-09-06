@@ -7,46 +7,96 @@
 
   <div class="productContainer">
     <div class="longpanel">
-        <img src="https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80" alt="">
+      <img
+        src="https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80"
+        alt=""
+      />
     </div>
-    <div class="productTitle"><p>Product Name</p> <p>150</p></div>
-    <div class="basicinfo">
-      <span class="infoheader"
-      ><p>Details</p>
-      <img class="dropdown"
-        src="{{ Info ? '/assets/images/up.png' : '/assets/images/down.jpg' }}"
-        (click)="displayInfo()"
-        alt="Menu icon"
-    /></span>
+    <div class="productTitle">
+      <p>Product Name</p>
+      <p>150</p>
     </div>
     <div class="basicinfo">
       <span class="infoheader"
-      ><p>Details</p>
-      <img class="dropdown"
-        src="{{ Info ? '/assets/images/up.png' : '/assets/images/down.jpg' }}"
-        (click)="displayInfo()"
-        alt="Menu icon"
-    /></span>
+        ><p>Details</p>
+        <img
+          class="dropdown"
+          src="{{ Info ? '/assets/images/up.png' : '/assets/images/down.jpg' }}"
+          (click)="displayInfo()"
+          alt="Menu icon"
+      /></span>
     </div>
     <div class="basicinfo">
       <span class="infoheader"
-      ><p>Details</p>
-      <img class="dropdown"
-        src="{{ Info ? '/assets/images/up.png' : '/assets/images/down.jpg' }}"
-        (click)="displayInfo()"
-        alt="Menu icon"
-    /></span>
+        ><p>Details</p>
+        <img
+          class="dropdown"
+          src="{{ Info ? '/assets/images/up.png' : '/assets/images/down.jpg' }}"
+          (click)="displayInfo()"
+          alt="Menu icon"
+      /></span>
     </div>
     <div class="basicinfo">
       <span class="infoheader"
-      ><p>Details</p>
-      <img class="dropdown"
-        src="{{ Info ? '/assets/images/up.png' : '/assets/images/down.jpg' }}"
-        (click)="displayInfo()"
-        alt="Menu icon"
-    /></span>
+        ><p>Details</p>
+        <img
+          class="dropdown"
+          src="{{ Info ? '/assets/images/up.png' : '/assets/images/down.jpg' }}"
+          (click)="displayInfo()"
+          alt="Menu icon"
+      /></span>
+    </div>
+    <div class="basicinfo">
+      <span class="infoheader"
+        ><p>Details</p>
+        <img
+          class="dropdown"
+          src="{{ Info ? '/assets/images/up.png' : '/assets/images/down.jpg' }}"
+          (click)="displayInfo()"
+          alt="Menu icon"
+      /></span>
     </div>
   </div>
-  <div><p>Explore More From This Collection</p></div>
-  <div class="bottomSection"></div>
+  <div class="exploresection">
+    <p>Explore More From This Collection</p>
+    <div class="navbtnsection">
+      <img src="assets/svgs/chevron-left.svg" alt="left" />
+      <img src="assets/svgs/chevron-right.svg" alt="right" />
+    </div>
+  </div>
+  <div class="bottomSection">
+    <div class="scrollSection">
+      <app-product-card
+      [ImgUrl]="
+        'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
+      "
+      routerLink="/details"
+    ></app-product-card>
+    <app-product-card
+    [ImgUrl]="
+      'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
+    "
+    routerLink="/details"
+  ></app-product-card>
+  <app-product-card
+  [ImgUrl]="
+    'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
+  "
+  routerLink="/details"
+></app-product-card>
+<app-product-card
+[ImgUrl]="
+  'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
+"
+routerLink="/details"
+></app-product-card>
+<app-product-card
+[ImgUrl]="
+'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
+"
+routerLink="/details"
+></app-product-card>
+    </div>
+   <button>Explore All</button>
+  </div>
 </section>
