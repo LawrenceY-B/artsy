@@ -13,48 +13,112 @@
       />
     </div>
     <div class="productTitle">
-      <p>Product Name</p>
-      <p>150</p>
+      <p class="title">Product Name</p>
+      <p class="currency">$0.00</p>
+    </div>
+    <div class="mainInfo">
+      <span class="creator">
+        <p>Creator :</p>
+        <p [ngStyle]="{ color: '#4693ED' }">Creator Name</p></span
+      >
+      <p>Made in Italy</p>
+      <p style="font-size: 18px"><b>Total Views: 1.5k views</b></p>
+      <span class="Count">
+        <img src="assets/svgs/plus.svg" alt="" (click)="add()" />
+        <p>{{ OrderNo }}</p>
+        <img src="assets/svgs/minus.svg" alt="" (click)="remove()" />
+      </span>
+      <span class="cartContainer">
+        <button class="cart">
+          Add to Cart <img src="assets/svgs/next.svg" alt="" />
+        </button>
+        <svg
+          width="50"
+          height="42"
+          viewBox="0 0 30 28"
+          fill="none"
+          class="fave"
+          (click)="changecolor(path)"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="30" height="28" rx="14" fill="white" />
+          <path
+            #path
+            d="M13.8866 21.6602L13.8859 21.6596C11.301 19.3157 9.19578 17.4032 7.73088 15.611C6.27148 13.8256 5.5 12.2206 5.5 10.5C5.5 7.68671 7.69555 5.49998 10.5 5.49998C12.0888 5.49998 13.6221 6.2422 14.6206 7.40562L15 7.84769L15.3794 7.40562C16.3779 6.2422 17.9112 5.49998 19.5 5.49998C22.3045 5.49998 24.5 7.68671 24.5 10.5C24.5 12.2206 23.7285 13.8256 22.2691 15.611C20.8042 17.4032 18.699 19.3157 16.1141 21.6596L16.1134 21.6602L15 22.6738L13.8866 21.6602Z"
+            stroke="#000"
+          />
+        </svg>
+      </span>
     </div>
     <div class="basicinfo">
       <span class="infoheader"
-        ><p>Details</p>
+        ><p>Description</p>
         <img
           class="dropdown"
-          src="{{ Info ? '/assets/images/up.png' : '/assets/images/down.jpg' }}"
-          (click)="displayInfo()"
+          src="{{
+            descriptiontoggle
+              ? '/assets/images/up.png'
+              : '/assets/images/down.jpg'
+          }}"
+          (click)="displayDescription()"
           alt="Menu icon"
       /></span>
+      <span class="description" *ngIf="descriptiontoggle">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          voluptatum, quibusdam, voluptate, quia voluptas quod quos
+          exercitationem voluptatibus quas quidem doloribus. Quisquam
+          voluptatum, quibusdam, voluptate, quia voluptas quod quos
+          exercitationem voluptatibus quas quidem doloribus.
+        </p>
+      </span>
     </div>
     <div class="basicinfo">
       <span class="infoheader"
-        ><p>Details</p>
+        ><p>Listings</p>
         <img
           class="dropdown"
-          src="{{ Info ? '/assets/images/up.png' : '/assets/images/down.jpg' }}"
-          (click)="displayInfo()"
+          src="{{
+            listingstoggle ? '/assets/images/up.png' : '/assets/images/down.jpg'
+          }}"
+          (click)="displayListings()"
           alt="Menu icon"
       /></span>
+      <span class="listing" *ngIf="listingstoggle">
+        <ul>
+          <li><strong>Medium:</strong><span>Acrylic on Canvas</span></li>
+          <li>
+            <strong>Dimensions:</strong
+            ><span>36 inches (height) x 48 inches (width)</span>
+          </li>
+          <li><strong>Year:</strong><span>2023</span></li>
+          <li><strong>Style:</strong><span>Abstract</span></li>
+          <li>
+            <strong>Framing:</strong
+            ><span>Unframed (Can be framed upon request)</span>
+          </li>
+        </ul>
+      </span>
     </div>
-    <div class="basicinfo">
+    <div class="bottomInfo">
       <span class="infoheader"
-        ><p>Details</p>
+        ><p>Status</p>
         <img
           class="dropdown"
-          src="{{ Info ? '/assets/images/up.png' : '/assets/images/down.jpg' }}"
-          (click)="displayInfo()"
+          src="{{
+            statustoggle ? '/assets/images/up.png' : '/assets/images/down.jpg'
+          }}"
+          (click)="displayStatus()"
           alt="Menu icon"
       /></span>
-    </div>
-    <div class="basicinfo">
-      <span class="infoheader"
-        ><p>Details</p>
-        <img
-          class="dropdown"
-          src="{{ Info ? '/assets/images/up.png' : '/assets/images/down.jpg' }}"
-          (click)="displayInfo()"
-          alt="Menu icon"
-      /></span>
+      <span class="status" *ngIf="statustoggle">
+        <button class="available" *ngIf="productstatus === 'In Stock'">
+          Available
+        </button>
+        <button class="unavailable" *ngIf="productstatus === 'Out of Stock'">
+          Out of Stock
+        </button>
+      </span>
     </div>
   </div>
   <div class="exploresection">
@@ -67,36 +131,36 @@
   <div class="bottomSection">
     <div class="scrollSection">
       <app-product-card
-      [ImgUrl]="
-        'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
-      "
-      routerLink="/details"
-    ></app-product-card>
-    <app-product-card
-    [ImgUrl]="
-      'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
-    "
-    routerLink="/details"
-  ></app-product-card>
-  <app-product-card
-  [ImgUrl]="
-    'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
-  "
-  routerLink="/details"
-></app-product-card>
-<app-product-card
-[ImgUrl]="
-  'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
-"
-routerLink="/details"
-></app-product-card>
-<app-product-card
-[ImgUrl]="
-'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
-"
-routerLink="/details"
-></app-product-card>
+        [ImgUrl]="
+          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
+        "
+        routerLink="/details"
+      ></app-product-card>
+      <app-product-card
+        [ImgUrl]="
+          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
+        "
+        routerLink="/details"
+      ></app-product-card>
+      <app-product-card
+        [ImgUrl]="
+          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
+        "
+        routerLink="/details"
+      ></app-product-card>
+      <app-product-card
+        [ImgUrl]="
+          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
+        "
+        routerLink="/details"
+      ></app-product-card>
+      <app-product-card
+        [ImgUrl]="
+          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
+        "
+        routerLink="/details"
+      ></app-product-card>
     </div>
-   <button>Explore All</button>
+    <button>Explore All</button>
   </div>
 </section>

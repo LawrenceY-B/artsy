@@ -4,6 +4,7 @@ import { ExhibitionCardComponent } from './libs/exhibition-card/exhibition-card.
 import { NavCardComponent } from './libs/nav-card/nav-card.component';
 import { FooterComponent } from './libs/footer/footer.component';
 import { ProductCardComponent } from './libs/product-card/product-card.component';
+import { RoutingModule } from '../modules/checkout/routing.module';
 
 
 
@@ -15,7 +16,9 @@ import { ProductCardComponent } from './libs/product-card/product-card.component
     ProductCardComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RoutingModule,
+    
   ],
   exports:[
     ExhibitionCardComponent,

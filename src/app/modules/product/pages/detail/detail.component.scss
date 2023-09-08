@@ -14,7 +14,7 @@ section {
     p {
       text-decoration: none;
       color: #bcb7b7;
-      font-size: 14px;
+      font-size: 18px;
       font-weight: 500;
       transition: all 0.2s ease-in-out;
       &:hover {
@@ -28,10 +28,10 @@ section {
   .productContainer {
     align-self: center;
     display: grid;
-    height: 70vh;
+    height: 75vh;
     width: 70vw;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr repeat(4, minmax(1fr, 250px));
     align-items: stretch;
     div {
       border: 1px solid #000;
@@ -41,16 +41,23 @@ section {
       }
     }
     .productTitle {
+      border-bottom-width: 0px;
+      border-left-width: 0px;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
       grid-column: 2;
       grid-row: 1;
-      font-size: 28px;
-      font-weight: 600;
+      .title {
+        font-size: 28px;
+        font-family: "Satoshi Bold";
+      }
+      .currency{
+        font-size: 20px;
+        font-family: "Baskervville";
+      }
       color: #000;
       text-transform: capitalize;
-      padding: 0;
     }
     .longpanel {
       grid-column: 1;
@@ -63,7 +70,11 @@ section {
         // object-postion:contain ;
       }
     }
-    .basicinfo {
+    .basicinfo,
+    .bottomInfo,
+    .mainInfo {
+      border-bottom-width: 0px;
+      border-left-width: 0px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -80,9 +91,104 @@ section {
         display: inline-flex;
         justify-content: space-between;
       }
+      .description,
+      .listing,
+      .status {
+        margin-top: 10px;
+        .available {
+          color: #027a48;
+          background-color: #ecfdf3;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          font-size: large;
+        }
+        .unavailable {
+          color: #b42318;
+          background-color: #fef3f2;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          font-size: large;
+        }
+      }
+      .listing {
+        ul {
+          list-style-type: none;
+          padding: 0;
+        }
+
+        ul li {
+          margin-bottom: 5px;
+        }
+
+        ul li strong {
+          font-weight: bold;
+          margin-right: 10px;
+          display: inline-block;
+          width: 100px;
+        }
+
+        ul li span {
+          display: inline-block;
+          color: #7b7b7b;
+        }
+      }
+    }
+    .bottomInfo {
+      border-bottom-width: 1px;
     }
   }
+  .mainInfo {
+    justify-content: space-evenly !important;
+    gap: 10px;
+    .creator {
+      font-size: 20px;
+      display: flex;
+      gap: 3px;
+    }
+    .Count {
+      font-size: 25px;
+      display: flex;
+      gap: 10px;
+      img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+        object-position: center;
+      }
+    }
+    .cartContainer {
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .cart {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        border: 1px solid #000;
+        padding: 10px 25px;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        // font-family: "Baskervville";
+        img {
+          width: 20px;
+          height: 20px;
+          object-fit: contain;
+          object-position: center;
+        }
+      }
+    }
+  }
+
   .exploresection {
+    border-bottom-width: 0px;
+    border-left-width: 0px;
     p {
       font-size: 20px;
       margin: 0;
@@ -122,13 +228,13 @@ section {
       scroll-padding-top: 10px;
     }
     button {
-        background-color: #f4f2f2;
-        padding: 10px 0px;
-        border: 1px solid #000;
-        border-radius: 5px;
-        background-color: transparent;
-        width: 100px;
-        margin-bottom: 40px;
+      background-color: #f4f2f2;
+      padding: 10px 0px;
+      border: 1px solid #000;
+      border-radius: 5px;
+      background-color: transparent;
+      width: 100px;
+      margin-bottom: 40px;
     }
   }
 }
