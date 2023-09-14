@@ -6,6 +6,7 @@ import { AuctionBoardComponent } from './auction.component';
 import { RoutingModule } from './routing.module';
 import { LivebidsComponent } from './pages/livebids/livebids.component';
 import { AuctionPageComponent } from './pages/auction/auction.component';
+import { LivecardsComponent } from './components/livecards/livecards.component';
 
 
 
@@ -13,7 +14,8 @@ import { AuctionPageComponent } from './pages/auction/auction.component';
   declarations: [
     AuctionPageComponent,
     AuctionBoardComponent,
-    LivebidsComponent
+    LivebidsComponent,
+    LivecardsComponent
 
   ],
   imports: [

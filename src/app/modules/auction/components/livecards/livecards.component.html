@@ -1,0 +1,56 @@
+<div class="livecontainer">
+    <div class="likebtn">
+
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+      (click)="changecolor(path)"
+      xmlns="http://www.w3.org/2000/svg">
+        <rect width="24" height="24" rx="5" fill="white"/>
+        <path #path d="M10.8866 19.6603L10.8859 19.6596C8.30104 17.3157 6.19578 15.4033 4.73088 13.6111C3.27148 11.8256 2.5 10.2206 2.5 8.5C2.5 5.68674 4.69555 3.5 7.5 3.5C9.08885 3.5 10.6221 4.24223 11.6206 5.40564L12 5.84771L12.3794 5.40564C13.3779 4.24223 14.9112 3.5 16.5 3.5C19.3045 3.5 21.5 5.68674 21.5 8.5C21.5 10.2206 20.7285 11.8256 19.2691 13.6111C17.8042 15.4033 15.699 17.3157 13.1141 19.6596L13.1134 19.6603L12 20.6738L10.8866 19.6603Z" stroke="#E2E2E2" stroke-opacity="0.71"/>
+        </svg>
+    </div>
+   
+    <img [src]='ImgUrl' alt="">
+    <span class="midlayer">
+        <div class="avatar-group">
+            <div class="iceberg-avatar bg-light">
+              <div class="initials">
+                JH
+              </div>
+            </div>
+            
+             <div class="iceberg-avatar div-2">
+              <div class="initials">
+                ON
+              </div>
+            </div>
+            
+              <div class="iceberg-avatar div-3">
+              <div class="initials">
+                KN
+              </div>
+            </div>
+            
+             <div class="iceberg-avatar div-4">
+              <div class="initials">
+                TD
+              </div>
+            </div>
+          </div>
+<div class="timer">
+    <p>Ends in</p>
+    <p>{{displayTime}}</p>
+</div>
+    </span>
+    <div class="lowerhalf">
+        <p class="ProductName">{{Product}}</p>
+        <p class="ProductCreator">By: {{Artist}}</p>
+        <div class="btnSection">
+            <p>{{Bid}}</p>
+            <button>
+                Join Live
+            </button>
+
+        </div>
+        
+    </div>
+</div>
