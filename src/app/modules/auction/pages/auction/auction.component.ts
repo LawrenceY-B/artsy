@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './auction.component.html',
   styleUrls: ['./auction.component.scss']
 })
-export class AuctionBoardComponent implements OnInit {
+export class AuctionPageComponent implements OnInit {
 
   constructor() { }
 

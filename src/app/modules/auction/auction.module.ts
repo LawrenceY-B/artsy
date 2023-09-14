@@ -1,15 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RoutingModule } from './routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { Router } from '@angular/router';
+import { AuctionBoardComponent } from './auction.component';
+import { RoutingModule } from './routing.module';
+import { LivebidsComponent } from './pages/livebids/livebids.component';
+import { AuctionPageComponent } from './pages/auction/auction.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    AuctionPageComponent,
+    AuctionBoardComponent,
+    LivebidsComponent
+
+  ],
   imports: [
-    CommonModule,
     RoutingModule,
+    CommonModule,
     SharedModule
   ]
 })

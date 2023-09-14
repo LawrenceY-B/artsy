@@ -1,12 +1,21 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { LivebidsComponent } from './pages/livebids/livebids.component';
+import { Routes, RouterModule } from '@angular/router';
+import { AuctionPageComponent } from './pages/auction/auction.component';
+import { AuctionBoardComponent } from './auction.component';
 
+const routes: Routes = [
+  { path: '', component: AuctionBoardComponent, children : [
+    {path:'', component:AuctionPageComponent },
+    {path:'livebids', component:LivebidsComponent },
 
+  ] },
 
+  { path: 'auction',   redirectTo: '/', pathMatch: 'full'},
+ 
+];
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
 })
-export class RoutingModule { }
+export class RoutingModule {}

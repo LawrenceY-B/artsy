@@ -4,7 +4,8 @@ import { ExhibitionCardComponent } from './libs/exhibition-card/exhibition-card.
 import { NavCardComponent } from './libs/nav-card/nav-card.component';
 import { FooterComponent } from './libs/footer/footer.component';
 import { ProductCardComponent } from './libs/product-card/product-card.component';
-import { RoutingModule } from '../modules/checkout/routing.module';
+import { RoutingModule } from '../modules/product/routing.module';
+import { HeaderComponent } from './libs/header/header.component';
 
 
 
@@ -13,18 +14,19 @@ import { RoutingModule } from '../modules/checkout/routing.module';
     ExhibitionCardComponent,
     NavCardComponent,
     FooterComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,
     RoutingModule,
-    
   ],
   exports:[
     ExhibitionCardComponent,
     NavCardComponent,
     FooterComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    HeaderComponent
   ]
 })
 export class SharedModule { }

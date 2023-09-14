@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './pages/home/home.component';
-import { HeaderComponent } from './components/header/header.component';
+import { HeaderComponent } from '../../shared/libs/header/header.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { RoutingModule } from './routing.module';
 import { ProductpageComponent } from './pages/productpage/productpage.component';
@@ -19,7 +19,6 @@ import { FilterComponent } from './components/filter/filter.component';
 @NgModule({
   declarations: [
     HomeComponent,
-    HeaderComponent,
     ProductcardComponent,
     ProductpageComponent,
     DetailComponent,
