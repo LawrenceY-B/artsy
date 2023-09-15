@@ -1,5 +1,4 @@
 section {
-    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,6 +6,7 @@ section {
     padding: 0px 0px 0px 30px;
     margin-left: 5px;
     gap: 30px;
+    height: 100%;
     .breadcrumbs {
       display: flex;
       gap: 4px;
@@ -27,20 +27,27 @@ section {
       }
     }
     .overview{
+        
         width: 95%;
 
         .bids{
             padding: 10px;
             width: 100%;
             display: flex;
-            gap: 10px;
+            gap: 60px;
             overflow-x: scroll;
         }
     }
-    .creator{
+    .creators{
         display: flex;
         flex-direction: column;
-        
+        width: 100%;
+        .creatorSection{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
     }
 }
   

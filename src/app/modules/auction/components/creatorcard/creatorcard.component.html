@@ -6,6 +6,11 @@
 
     <div class="creatorWorks">
         <img [src]="CreatorUrl" alt="">
+        <div class="imgCaption">
+            <p>{{ProductName}}</p>
+            <!-- <hr>
+            <p>Expand</p> -->
+        </div>
     </div>
 
     <div class="bids">
@@ -13,6 +18,7 @@
             <p>Highest Bids</p>
             <p class="notice">{{HighestBids}}</p>
         </div>
+        <hr>
         <div class="auction">
             <p>Auction Ending In</p>
             <p class="notice">{{Auction}}</p>
@@ -33,4 +39,14 @@
             <img src="/assets/svgs/Facebook.svg" alt="facebook">
         </div> 
     </div>
+    <form class="bidinput" [formGroup]="BidForm">
+        <div class="text">
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.082 2.61304L5.83203 13.113L12.082 16.863L18.332 13.113L12.082 2.61304ZM5.83203 14.363L12.082 23.113L18.332 14.363L12.082 18.113L5.83203 14.363Z" fill="black"/>
+                </svg>
+                
+            <input type="text" placeholder="Enter your bid" formControlName="Bid">
+        </div>
+        <input type="submit" value="Place Bid" (click)="submitForm()">
+    </form>
 </div>

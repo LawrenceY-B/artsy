@@ -8,6 +8,7 @@ import { LivebidsComponent } from './pages/livebids/livebids.component';
 import { AuctionPageComponent } from './pages/auction/auction.component';
 import { LivecardsComponent } from './components/livecards/livecards.component';
 import { CreatorcardComponent } from './components/creatorcard/creatorcard.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -17,13 +18,16 @@ import { CreatorcardComponent } from './components/creatorcard/creatorcard.compo
     AuctionBoardComponent,
     LivebidsComponent,
     LivecardsComponent,
-    CreatorcardComponent
+    CreatorcardComponent,
+    
 
   ],
   imports: [
     RoutingModule,
     CommonModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class AuctionModule { }
