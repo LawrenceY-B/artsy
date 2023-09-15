@@ -7,6 +7,7 @@ import { RoutingModule } from './routing.module';
 import { LivebidsComponent } from './pages/livebids/livebids.component';
 import { AuctionPageComponent } from './pages/auction/auction.component';
 import { LivecardsComponent } from './components/livecards/livecards.component';
+import { CreatorcardComponent } from './components/creatorcard/creatorcard.component';
 
 
 
@@ -15,7 +16,8 @@ import { LivecardsComponent } from './components/livecards/livecards.component';
     AuctionPageComponent,
     AuctionBoardComponent,
     LivebidsComponent,
-    LivecardsComponent
+    LivecardsComponent,
+    CreatorcardComponent
 
   ],
   imports: [

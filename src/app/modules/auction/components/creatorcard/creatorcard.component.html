@@ -1,0 +1,36 @@
+<div class="creatorContainer">
+    <div class="imgContainer">
+        <img [src]="ImgUrl" alt="">
+        <h2>{{CreatorName}}</h2>
+    </div>
+
+    <div class="creatorWorks">
+        <img [src]="CreatorUrl" alt="">
+    </div>
+
+    <div class="bids">
+        <div class="highestbids">
+            <p>Highest Bids</p>
+            <p class="notice">{{HighestBids}}</p>
+        </div>
+        <div class="auction">
+            <p>Auction Ending In</p>
+            <p class="notice">{{Auction}}</p>
+        </div>
+    </div>
+    <div class="creatorInfo">
+        <p class="Infotext" [ngClass]="{'Infotext':Readmore,'Normaltext':!Readmore}" >{{CreatorInfo}}</p>
+        <div *ngIf="Readmore">
+            <p class="readmore" (click)="readmore()">Read More</p>
+        </div>
+        <div *ngIf="!Readmore">
+            <p class="readmore" (click)="readmore()">See Less</p>
+        </div>
+        
+        <div class="socials">
+            <img src="/assets/svgs/instagram.svg" alt="instagram">
+            <img src="/assets/svgs/twitter.svg" alt="twitter">
+            <img src="/assets/svgs/Facebook.svg" alt="facebook">
+        </div> 
+    </div>
+</div>

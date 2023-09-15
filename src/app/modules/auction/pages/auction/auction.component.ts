@@ -11,5 +11,5 @@ export class AuctionPageComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+ 
 }
