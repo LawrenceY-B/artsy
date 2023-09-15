@@ -2,6 +2,7 @@ export interface ILivecard {
     ImgUrl: string;
     Bid: number;
     Artist: string;
+    ArtistUrl: string;
     countdownHours: number;
     Product: string;
     isSaved: boolean;

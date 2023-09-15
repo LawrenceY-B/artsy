@@ -9,6 +9,7 @@ import { AuctionPageComponent } from './pages/auction/auction.component';
 import { LivecardsComponent } from './components/livecards/livecards.component';
 import { CreatorcardComponent } from './components/creatorcard/creatorcard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LikebtnComponent } from './components/likebtn/likebtn.component';
 
 
 
@@ -18,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AuctionBoardComponent,
     LivebidsComponent,
     LivecardsComponent,
+    LikebtnComponent,
     CreatorcardComponent,
     
 

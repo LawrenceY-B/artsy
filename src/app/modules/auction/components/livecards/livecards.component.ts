@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { timer } from 'rxjs';
 import { ILivecard } from 'src/app/shared/model/auction.model';
+import { NavigationService } from 'src/app/shared/services/liveNavigation.service';
 
 @Component({
   selector: 'app-livecards',
@@ -9,7 +10,6 @@ import { ILivecard } from 'src/app/shared/model/auction.model';
 })
 export class LivecardsComponent implements OnInit {
   @Input() result!: ILivecard;
-  @Output() auctionInfo = new EventEmitter<ILivecard>();
 
   
   // @Input() Time!: Date;
@@ -17,7 +17,9 @@ export class LivecardsComponent implements OnInit {
   intervalId:any;
   countdownSeconds!: number ;
   displayTime:string= '00 h : 00 m : 00 s';
-  constructor() {}
+  constructor(
+    private Navigation:NavigationService
+  ) {}
 
   ngOnInit(): void {
     //start timer
@@ -67,12 +69,12 @@ export class LivecardsComponent implements OnInit {
       this.isSaved = true;
     } else {
       this.isSaved = false;
-      path.style.fill = '#fff';
-      path.style.stroke = '#bcb7b7';
+      path.style.fill = '';
+      path.style.stroke = '#fff';
     }
   }
 
   sendData(){
-    console.log(this.result.Product)
+    this.Navigation.setSharedData(this.result);
   }
 }

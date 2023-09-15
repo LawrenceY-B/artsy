@@ -11,7 +11,6 @@ export class AuctionPageComponent implements OnInit {
 
 CreatorData:ICreator[]=[];
 LivecardData:ILivecard[]=[];
-@Output() auctionInfo = new EventEmitter<ILivecard[]>();
 trial!:IAuctionModel[];
 
   constructor(
@@ -23,7 +22,6 @@ trial!:IAuctionModel[];
       this.CreatorData = data.creators
       this.LivecardData = data.livecards
       
-     
     })
   }
   

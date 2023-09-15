@@ -1,0 +1,218 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px 0px 0px 30px;
+  margin-left: 5px;
+  gap: 30px;
+  height: 100%;
+  .breadcrumbs {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    margin-bottom: 20px;
+    p {
+      text-decoration: none;
+      color: #bcb7b7;
+      font-size: 18px;
+      font-weight: 500;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        color: #000;
+      }
+    }
+    .current {
+      color: #000;
+    }
+  }
+  section {
+    align-self: center;
+    .liveContainer {
+      display: flex;
+      flex-wrap: wrap;
+      width: 70vw;
+      height: 70vh;
+      .imgContainer {
+        width: 50%;
+        height: 100%;
+        position: relative;
+        .bidImage {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+        .topIcons {
+          position: absolute;
+          top: 0px;
+          width: 90%;
+          display: flex;
+          justify-content: space-between;
+          padding: 12px 14px;
+          span {
+            color: #175cd3;
+            background-color: #eff8ff;
+            padding: 4px 8px;
+            border-radius: 10px;
+          }
+        }
+        .bidBox {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50%;
+          position: absolute;
+          left: 25%;
+          /* right: 50%; */
+          top: 50%;
+          padding: 10px 12px;
+          background: rgba(255, 255, 255, 0.2);
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+          h2 {
+            margin: 0;
+          }
+        }
+        .bottomIcons {
+          position: absolute;
+          bottom: 0px;
+          display: flex;
+          align-items: center;
+          padding: 8px;
+          background-color: white;
+          border-radius: 15px;
+          margin: 10px;
+          gap: 6px;
+          .avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+          }
+          .avatarname {
+            font-size: 14px;
+            color: #7b7b7b;
+            margin: 0;
+          }
+        }
+      }
+      .chatContainer {
+        width: 45%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        h1 {
+          margin: 0;
+        }
+        nav {
+          background-color: hsl(247.74deg 100% 94% / 35.29%);
+          display: flex;
+          width: 100%;
+          height: 35px;
+          align-items: center;
+          justify-content: space-between;
+          padding: 4px;
+          div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            width: 48%;
+            height: 100%;
+            border-radius: 5px;
+            p {
+              margin: 0;
+              font-size: 14px;
+              font-family: "Satoshi Bold";
+              color: #020307;
+            }
+          }
+          .ChatNav {
+            background-color: #ffffff;
+            width: 48%;
+            height: 100%;
+            border-radius: 5px;
+          }
+          .BidNav {
+            background-color: #ffffff;
+            width: 48%;
+            height: 100%;
+            border-radius: 5px;
+          }
+        }
+        .chatArea {
+          background-color: #000000;
+        }
+        .MessageBox {
+          width: 100%;
+          align-self: flex-end;
+          padding: 6px;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          gap: 10px;
+          input[type="text"] {
+            width: 80%;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 14px;
+            font-family: "Satoshi Bold";
+            color: #020307;
+            background-color: #ffffff;
+            outline: none;
+          }
+          .submitBtn {
+            background: #000000;
+            color: white;
+            font-family: inherit;
+            padding: 10px 14px;
+            width: max(98px);
+            border: none;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            box-shadow: inset 0 0 1.6em -0.6em #7b7b7b;
+            overflow: hidden;
+            position: relative;
+          }
+
+          .submitBtn .icon {
+            background: white;
+            margin-left: 1em;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 2.2em;
+            width: 2.2em;
+            border-radius: 8px;
+            box-shadow: 0.1em 0.1em 0.6em 0.2em #7b7b7b;
+            right: 0.3em;
+            transition: all 0.3s;
+          }
+
+          .submitBtn:hover .icon {
+            width: calc(100% - 0.6em);
+          }
+
+          .submitBtn .icon svg {
+            width: 1.1em;
+            transition: transform 0.3s;
+            color: #7b7b7b;
+          }
+
+          .submitBtn:hover .icon svg {
+            transform: translateX(0.1em);
+          }
+
+          .submitBtn:active .icon {
+            transform: scale(0.95);
+          }
+        }
+      }
+    }
+  }
+}

@@ -26,6 +26,9 @@ $imageHeight: calc(1/2 * $containerHeight);
     justify-content: center;
     top: 30px;
     right: 20px;
+    border-radius: 10px;
+    background: rgba(209, 209, 209, 0.21); /* Translucent white background */
+            backdrop-filter: blur(5px);
   }
   .imgContainer {
     
