@@ -7,121 +7,22 @@
   <div class="overview">
     <h3>Here’s an overview of products actively on auction, explore!</h3>
     <div class="bids">
-      <app-livecards
-        [ImgUrl]="
-          'https://images.unsplash.com/photo-1654792393225-3e8a53d124d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDl8fG5mdCUyMGFydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60'
-        "
-        [Bid]="1.25"
-        [Artist]="'Jane Doe'"
-        [countdownHours]="10"
-        [Product]="'Dead Man Walking'"
-      ></app-livecards>
-
-      <app-livecards
-        [ImgUrl]="
-          'https://i.pinimg.com/474x/2c/20/43/2c2043cb78cac77193070d1fac8ddadb.jpg'
-        "
-        [Bid]="0.01"
-        [Artist]="'John Smith'"
-        [countdownHours]="5"
-        [Product]="'Wavy Ape'"
-      ></app-livecards>
-
-      <app-livecards
-        [ImgUrl]="
-          'https://cdn.pixabay.com/photo/2022/04/20/12/16/abstract-art-7145098_1280.jpg'
-        "
-        [Bid]="1.08"
-        [Artist]="'Alice Johnson'"
-        [countdownHours]="8"
-        [Product]="'Mystic Forest'"
-      ></app-livecards>
-      <app-livecards
-        [ImgUrl]="
-          'https://i.pinimg.com/236x/25/3a/6c/253a6c34a8093e207dc34b25d6b33d3b.jpg'
-        "
-        [Bid]="1.28"
-        [Artist]="'Michael Brown'"
-        [countdownHours]="12"
-        [Product]="'Ancient Ruins'"
-      ></app-livecards>
-
-      <app-livecards
-        [ImgUrl]="
-          'https://i.pinimg.com/236x/65/2f/b0/652fb0944e56ba1f81503a3e25a9469e.jpg'
-        "
-        [Bid]="0.21"
-        [Artist]="'Sarah Lee'"
-        [countdownHours]="6"
-        [Product]="'Ocean Waves'"
-      ></app-livecards>
-      <app-livecards
-        [ImgUrl]="
-          'https://i.pinimg.com/236x/05/a0/dc/05a0dc5e6ebd66a946c5a4e81d69048c.jpg'
-        "
-        [Bid]="3.17"
-        [Artist]="'David Clark'"
-        [countdownHours]="7"
-        [Product]="'Cityscape'"
-      ></app-livecards>
-
-      <app-livecards
-        [ImgUrl]="
-          'https://i.pinimg.com/236x/df/29/3a/df293ad7446fcff4abbb9af00f998541.jpg'
-        "
-        [Bid]="149.68"
-        [Artist]="'Emily White'"
-        [countdownHours]="9"
-        [Product]="'Sunset Paradise'"
-      ></app-livecards>
-
-      <app-livecards
-        [ImgUrl]="
-          'https://i.pinimg.com/236x/e5/2c/cd/e52ccdf32e44139d369e80695f20254f.jpg'
-        "
-        [Bid]="0.1"
-        [Artist]="'Olivia Green'"
-        [countdownHours]="4"
-        [Product]="'Mountain Retreat'"
-      ></app-livecards>
+      <div *ngFor="let items of LivecardData">
+        <app-livecards
+        [result]="items"
+          
+        ></app-livecards>
+      </div>
     </div>
   </div>
   <div class="creators">
     <h3>Top bids from popular creators</h3>
-    <div class="creatorSection">
-      <app-creatorcard
-        [ImgUrl]="'assets/images/creator3.jpg'"
-        [CreatorName]="'Elijah Johnson'"
-        [HighestBids]="8.75"
-        [countdownHours]="1"
-        [CreatorUrl]="
-          'https://i.pinimg.com/236x/5c/b2/95/5cb2957841b960fe3e4ff18fd7a24490.jpg'
-        "
-        [ProductName]="'Clone NFT'"
+    <div class="creatorSection" >
+      <div *ngFor="let item of CreatorData">
+        <app-creatorcard
+        [Result]="item"
       ></app-creatorcard>
-
-      <app-creatorcard
-        [ImgUrl]="
-          'https://i.pinimg.com/564x/85/13/09/8513094ac659e3ded9e056bfeba2e6c5.jpg'
-        "
-        [CreatorName]="'Nala Goins'"
-        [HighestBids]="5.75"
-        [countdownHours]="1"
-        [CreatorUrl]="
-          'https://i.pinimg.com/236x/f7/06/f5/f706f52fa0ccf505724b13306b0a9057.jpg'
-        "
-        [ProductName]="'Lone Wanderer'"
-      ></app-creatorcard>
-      <app-creatorcard
-        [ImgUrl]="'https://i.pinimg.com/236x/f0/95/8f/f0958fcc18e24e609257412cae0ae92a.jpg'"
-        [CreatorName]="'Joshua Wilson'"
-        [HighestBids]="4.75"
-        [countdownHours]="1"
-        [CreatorUrl]="
-          'https://i.pinimg.com/236x/63/f4/52/63f4520af6501dd9b1cc35676252eea5.jpg'
-        "
-        [ProductName]="'VividYouth'"
-      ></app-creatorcard>
+      </div>
     </div>
   </div>
 </section>

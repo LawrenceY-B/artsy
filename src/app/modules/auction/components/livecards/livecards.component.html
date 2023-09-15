@@ -18,7 +18,7 @@
     </svg>
   </div>
   <div class="imgContainer">
-    <img [src]="ImgUrl" alt="" />
+    <img [src]="result.ImgUrl" alt="" />
   </div>
 
   <span class="midlayer">
@@ -45,8 +45,8 @@
     </div>
   </span>
   <div class="lowerhalf">
-    <h4 class="ProductName">{{ Product }}</h4>
-    <p class="ProductCreator">By: {{ Artist }}</p>
+    <h4 class="ProductName">{{ result.Product }}</h4>
+    <p class="ProductCreator">By: {{ result.Artist }}</p>
     <div class="btnSection">
       <div class="bidbox">
         <p style="font-family: Satoshi Bold">Current Bid</p>
@@ -63,11 +63,11 @@
               fill="black"
             />
           </svg>
-          {{ Bid }}
+          {{ result.Bid }}
         </span>
       </div>
 
-      <button>Join Live</button>
+      <button (click)="sendData()">Join Live</button>
     </div>
   </div>
 </div>

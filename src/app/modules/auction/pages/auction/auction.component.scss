@@ -1,53 +1,97 @@
 section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px 0px 0px 30px;
+  margin-left: 5px;
+  gap: 30px;
+  height: 100%;
+  .breadcrumbs {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 0px 0px 0px 30px;
-    margin-left: 5px;
-    gap: 30px;
-    height: 100%;
-    .breadcrumbs {
-      display: flex;
-      gap: 4px;
-      align-items: center;
-      margin-bottom: 20px;
-      p {
-        text-decoration: none;
-        color: #bcb7b7;
-        font-size: 18px;
-        font-weight: 500;
-        transition: all 0.2s ease-in-out;
-        &:hover {
-          color: #000;
-        }
-      }
-      .current {
+    gap: 4px;
+    align-items: center;
+    margin-bottom: 20px;
+    p {
+      text-decoration: none;
+      color: #bcb7b7;
+      font-size: 18px;
+      font-weight: 500;
+      transition: all 0.2s ease-in-out;
+      &:hover {
         color: #000;
       }
     }
-    .overview{
-        
-        width: 95%;
-
-        .bids{
-            padding: 10px;
-            width: 100%;
-            display: flex;
-            gap: 60px;
-            overflow-x: scroll;
-        }
+    .current {
+      color: #000;
     }
-    .creators{
+  }
+  .overview {
+    width: 95%;
+
+    .bids {
+      padding: 10px;
+      width: 100%;
+      display: flex;
+      gap: 60px;
+      overflow-x: scroll;
+    }
+  }
+  .creators {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .creatorSection {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  section {
+    overflow-x: hidden;
+    margin: 0px;
+    padding: 5px;
+    .breadcrumbs {
+      display: none;
+    }
+    .overview {
+      width: 100%;
+      .bids {
+        gap: 20px;
+      }
+    }
+    .creators {
+      .creatorSection {
         display: flex;
         flex-direction: column;
-        width: 100%;
-        .creatorSection{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-        }
-
+        gap: 20px;
+      }
     }
+  }
 }
-  
+
+// @media only screen and (max-width: 768px){
+//     .section{
+//         overflow-x:hidden ;
+//         margin: 0px;
+//         .breadcrumbs{
+//             display: none;
+//         }
+//         .overview{
+//             width: 100%;
+//             .bids{
+//                 gap: 20px;
+//             }
+//         }
+//         .creators{
+//             .creatorSection{
+//                 display: flex;
+//                 flex-direction: column;
+//                 gap: 20px;
+//             }
+//         }
+//     }
+
+// }

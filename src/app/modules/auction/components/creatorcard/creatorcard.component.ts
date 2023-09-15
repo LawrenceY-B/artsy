@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ICreator } from 'src/app/shared/model/auction.model';
 
 @Component({
   selector: 'app-creatorcard',
@@ -18,11 +19,8 @@ export class CreatorcardComponent implements OnInit {
   });
 
   Readmore:boolean = true;
-  @Input() ImgUrl!: string;
-  @Input() CreatorName!: string;
-  @Input() HighestBids!: number;
-  @Input() CreatorUrl!: string;
-  @Input() ProductName!: string;
+  @Input() Result!: ICreator;
+
   intervalId:any;
   @Input() countdownHours!:number
   countdownSeconds!: number ;
@@ -32,13 +30,13 @@ export class CreatorcardComponent implements OnInit {
 submitForm(){
   const newBid=parseFloat(this.BidForm.value.Bid as string);
   console.log(newBid);
-  if(newBid>this.HighestBids){
-    this.HighestBids=newBid;
+  if(newBid>this.Result.HighestBids){
+    this.Result.HighestBids=newBid;
   }
 }
 
   ngOnInit(): void {
-    this.countdownSeconds = this.countdownHours * 3600; // Convert hours to seconds
+    this.countdownSeconds = this.Result.countdownHours * 3600; // Convert hours to seconds
     this.startCountdown();
   }
   startCountdown() {

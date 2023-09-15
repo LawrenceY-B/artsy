@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { timer } from 'rxjs';
+import { ILivecard } from 'src/app/shared/model/auction.model';
 
 @Component({
   selector: 'app-livecards',
@@ -7,27 +8,28 @@ import { timer } from 'rxjs';
   styleUrls: ['./livecards.component.scss'],
 })
 export class LivecardsComponent implements OnInit {
-  @Input() ImgUrl!: string;
-  @Input() Product!: string;
-  @Input() Artist!: string;
-  @Input() Bid!: Number
+  @Input() result!: ILivecard;
+  @Output() auctionInfo = new EventEmitter<ILivecard>();
+
+  
   // @Input() Time!: Date;
   isSaved: boolean = false;
   intervalId:any;
-  @Input() countdownHours!:number
   countdownSeconds!: number ;
   displayTime:string= '00 h : 00 m : 00 s';
   constructor() {}
 
   ngOnInit(): void {
+    //start timer
     timer(1000, 7000).subscribe((x) => {
       const randomBid = this.getRandomBid();
-      this.Bid = parseFloat((Number(this.Bid) + randomBid).toFixed(2)); // Ensure Bid has two decimal points
+      this.result.Bid = parseFloat((Number(this.result.Bid) + randomBid).toFixed(2)); // Ensure Bid has two decimal points
     });
+    //Current Time
     // timer(1000, 1000).subscribe((x) => {
     //   this.Time = new Date();
     // });
-    this.countdownSeconds = this.countdownHours * 3600; // Convert hours to seconds
+    this.countdownSeconds = this.result.countdownHours * 3600; // Convert hours to seconds
     this.startCountdown();
 
   }
@@ -68,5 +70,9 @@ export class LivecardsComponent implements OnInit {
       path.style.fill = '#fff';
       path.style.stroke = '#bcb7b7';
     }
+  }
+
+  sendData(){
+    console.log(this.result.Product)
   }
 }
