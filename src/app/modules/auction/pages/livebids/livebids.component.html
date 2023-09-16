@@ -1,7 +1,7 @@
 <main>
   <div class="breadcrumbs">
     <p routerLink="">Home/</p>
-    <p routerLink="/auction">Auction</p>
+    <p routerLink="/auction">Auction/</p>
     <p class="current">Live Bid</p>
   </div>
   <section>
@@ -9,7 +9,20 @@
       <div class="imgContainer">
         <img class="bidImage" [src]="result.ImgUrl" alt="" />
         <div class="topIcons">
-          <img src="/assets/svgs/heart.svg" alt="" />
+          <div class="close" routerLink="/auction">
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14.45 12.6509L19.99 18.1909V19.6509H18.53L12.99 14.1109L7.44999 19.6509H5.98999V18.1909L11.53 12.6509L5.98999 7.11091V5.65091H7.44999L12.99 11.1909L18.53 5.65091H19.99V7.11091L14.45 12.6509Z"
+                fill="#fff"
+              />
+            </svg>
+          </div>
           <span>Live</span>
         </div>
         <div class="bidBox">
@@ -35,21 +48,34 @@
             <p>Bids</p>
           </div>
         </nav>
-        <div class="chatBox" *ngIf="display == 'Chat'">
-          <div class="chatArea"></div>
-          
-        </div>
-        <div class="bidBox" *ngIf="display == 'Bid'">
-            <div class="BidArea"></div>
+        <div class="chat-message-container">
+          <div class="chatBox" *ngIf="display == 'Chat'" appAutoScroll>
+            <div class="chat-bubble-receiver">
+              <p>Hello, this is a chat message.</p>
+            </div>
+            <div
+              *ngFor="let message of Chatmessages"
+              [ngClass]="{ senderArea: message.userType == 'Sender' }"
+            >
+              <div class="chat-bubble-sender">
+                <p>{{ message.message }}</p>
+              </div>
+              <p class="time">{{ message.timestamp | date : "shortTime" }}</p>
+            </div>
+          </div>
+          <form
+            class="MessageBox"
+            [formGroup]="MessageForm"
+            *ngIf="display == 'Chat'"
+          >
+            <div class="inputBox">
+              <input
+                type="text"
+                placeholder="Type your message here"
+                formControlName="Message"
+              />
 
-        </div>
-
-        <form class="MessageBox" [formGroup]="MessageForm">
-            <input type="text" placeholder="Type your message here" formControlName="Message"/>
-            <app-likebtn></app-likebtn>
-            <button class="submitBtn">
-              Send
-              <div class="icon">
+              <button class="icon" (click)="sendMessage()">
                 <svg
                   width="25"
                   height="25"
@@ -62,10 +88,39 @@
                     fill="black"
                   />
                 </svg>
-              </div>
-            </button>
+              </button>
+            </div>
+
+            <app-likebtn></app-likebtn>
+          </form>
+        </div>
+        <form class="MessageBox" [formGroup]="BidForm" *ngIf="display == 'Bid'">
+          <input
+            type="text"
+            placeholder="Place Your Bid Here"
+            formControlName="Bid"
+          />
+
+          <div class="icon" (click)="sendBid()">
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.77295 20.5683V4.56833L22.7729 12.5683M5.77295 17.5683L17.6229 12.5683L5.77295 7.56833V11.0683L11.7729 12.5683L5.77295 14.0683M5.77295 17.5683V7.56833V14.0683V17.5683Z"
+                fill="black"
+              />
+            </svg>
+          </div>
         </form>
       </div>
     </div>
+    <span routerLink="/auction/drops">
+        <h2>See Upcoming Drops</h2>
+        <img src="/assets/svgs/nextbtn.svg" alt="next btn" >
+    </span>   
   </section>
 </main>

@@ -10,6 +10,7 @@ import { LivecardsComponent } from './components/livecards/livecards.component';
 import { CreatorcardComponent } from './components/creatorcard/creatorcard.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LikebtnComponent } from './components/likebtn/likebtn.component';
+import { AutoScrollDirective } from './directives/auto-scroll.directive';
 
 
 
@@ -21,6 +22,7 @@ import { LikebtnComponent } from './components/likebtn/likebtn.component';
     LivecardsComponent,
     LikebtnComponent,
     CreatorcardComponent,
+    AutoScrollDirective
     
 
   ],
