@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { IAuctionModel, ICreator, ILivecard } from 'src/app/shared/model/auction.model';
+import { IAuctionModel, ICreator, IAuctionData } from 'src/app/shared/model/auction.model';
 import { AuctionService } from 'src/app/shared/services/auction.service';
 
 @Component({
@@ -10,7 +10,8 @@ import { AuctionService } from 'src/app/shared/services/auction.service';
 export class AuctionPageComponent implements OnInit {
 
 CreatorData:ICreator[]=[];
-LivecardData:ILivecard[]=[];
+AuctionData:IAuctionData[]=[];
+LiveAuction:IAuctionData[]=[];
 trial!:IAuctionModel[];
 
   constructor(
@@ -20,7 +21,10 @@ trial!:IAuctionModel[];
   ngOnInit(): void {
     this.auction.getAuctionData().subscribe((data) => {
       this.CreatorData = data.creators
-      this.LivecardData = data.livecards
+      this.AuctionData = data.auctiondata;
+
+      this.LiveAuction = this.AuctionData.filter((auction) => auction.Status === 'live now');
+console.log(this.AuctionData.map((x)=>x.Status))
       
     })
   }

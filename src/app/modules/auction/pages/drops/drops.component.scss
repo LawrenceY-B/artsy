@@ -1,0 +1,70 @@
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px 0px 0px 30px;
+  margin-left: 5px;
+  gap: 30px;
+  height: 100%;
+  .breadcrumbs {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    margin-bottom: 20px;
+    p {
+      text-decoration: none;
+      color: #bcb7b7;
+      font-size: 18px;
+      font-weight: 500;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        color: #000;
+      }
+    }
+    .current {
+      color: #000;
+    }
+  }
+  .overview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    // height: 100vh;
+    .upcoming {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      button {
+        padding: 6px 8px;
+        height: 50px;
+        border-radius: 8px;
+        border: 1px solid #000;
+        background-color: #fff;
+        color: #000;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img:hover {
+            animation: bellshake 1s ease infinite;
+        }
+      }
+    }
+  }
+}
+@keyframes bellshake {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(5deg); }
+    20% { transform: rotate(-5deg); }
+    30% { transform: rotate(5deg); }
+    40% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    60% { transform: rotate(-5deg); }
+    70% { transform: rotate(5deg); }
+    80% { transform: rotate(-5deg); }
+    90% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}

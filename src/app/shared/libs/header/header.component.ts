@@ -14,7 +14,7 @@ export class HeaderComponent implements AfterViewInit {
     { name: "Home", tag: "home" },
     { name: "Marketplace", tag: "products" },
     { name: "Auction", tag: "auction" },
-    { name: "Drops", tag: "drops" },
+    { name: "Drop", tag: "auction/drop" },
 
 
   ]

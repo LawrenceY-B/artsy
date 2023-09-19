@@ -1,116 +1,129 @@
 {
-    "livecards": [
-      {
-        "ImgUrl": "https://images.unsplash.com/photo-1654792393225-3e8a53d124d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDl8fG5mdCUyMGFydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60",
-        "Bid": 1.25,
-        "Artist": "Jane Doe",
-        "ArtistUrl":"https://i.pinimg.com/236x/4d/33/92/4d3392b849bd5fc36527793e31386512.jpg",
-        "countdownHours": 10,
-        "Product": "Dead Man Walking",
-        "isSaved":false
-      },
-      {
-        "ImgUrl": "https://i.pinimg.com/474x/2c/20/43/2c2043cb78cac77193070d1fac8ddadb.jpg",
-        "Bid": 0.01,
-        "Artist": "John Smith",
-        "ArtistUrl":"https://i.pinimg.com/236x/49/aa/e1/49aae1e414413eee95bfac5fa8327ad2.jpg",
-        "countdownHours": 5,
-        "Product": "Wavy Ape",
-        "isSaved":false
-
-      },
-      {
-        "ImgUrl": "https://cdn.pixabay.com/photo/2022/04/20/12/16/abstract-art-7145098_1280.jpg",
-        "Bid": 1.08,
-        "Artist": "Alice Johnson",
-        "ArtistUrl":"https://i.pinimg.com/236x/31/f0/9d/31f09d0fc48c1d8314272e1847e96ed8.jpg",
-        "countdownHours": 8,
-        "Product": "Mystic Forest",
-        "isSaved":false
-
-      },
-      {
-        "ImgUrl": "https://i.pinimg.com/236x/25/3a/6c/253a6c34a8093e207dc34b25d6b33d3b.jpg",
-        "Bid": 1.28,
-        "Artist": "Michael Brown",
-        "ArtistUrl":"https://i.pinimg.com/236x/c0/99/15/c099159849a5f3399e05335f2c56adca.jpg",
-        "countdownHours": 12,
-        "Product": "Ancient Ruins",
-        "isSaved":false
-
-      },
-      {
-        "ImgUrl": "https://i.pinimg.com/236x/65/2f/b0/652fb0944e56ba1f81503a3e25a9469e.jpg",
-        "Bid": 0.21,
-        "Artist": "Sarah Lee",
-        "ArtistUrl":"https://i.pinimg.com/236x/bc/db/4a/bcdb4a84f64a9c1b3e29064994e31862.jpg",
-        "countdownHours": 6,
-        "Product": "Ocean Waves",
-        "isSaved":false
-
-      },
-      {
-        "ImgUrl": "https://i.pinimg.com/236x/05/a0/dc/05a0dc5e6ebd66a946c5a4e81d69048c.jpg",
-        "Bid": 3.17,
-        "Artist": "David Clark",
-        "ArtistUrl":"https://i.pinimg.com/236x/76/05/ab/7605ab036f99d17edb5e82ffd5370a43.jpg",
-        "countdownHours": 7,
-        "Product": "Cityscape",
-        "isSaved":false
-
-      },
-      {
-        "ImgUrl": "https://i.pinimg.com/236x/df/29/3a/df293ad7446fcff4abbb9af00f998541.jpg",
-        "Bid": 149.68,
-        "Artist": "Emily White",
-        "ArtistUrl":"https://i.pinimg.com/236x/c3/ed/cd/c3edcd3e27113ef1a163fb19243cd625.jpg",
-        "countdownHours": 9,
-        "Product": "Sunset Paradise",
-        "isSaved":false
-
-      },
-      {
-        "ImgUrl": "https://i.pinimg.com/236x/e5/2c/cd/e52ccdf32e44139d369e80695f20254f.jpg",
-        "Bid": 0.1,
-        "Artist": "Olivia Green",
-        "ArtistUrl":"https://i.pinimg.com/236x/91/56/e8/9156e8099e9289954c5757bf1a094baa.jpg",
-        "countdownHours": 4,
-        "Product": "Mountain Retreat",
-        "isSaved":false
-
-      }
-    ],
-    "creators": [
-      {
-        "ImgUrl": "assets/images/creator3.jpg",
-        "CreatorName": "Elijah Johnson",
-        "HighestBids": 8.75,
-        "countdownHours": 1,
-        "CreatorUrl": "https://i.pinimg.com/236x/5c/b2/95/5cb2957841b960fe3e4ff18fd7a24490.jpg",
-        "ProductName": "Clone NFT",
-        "isFollowing":false
-
-      },
-      {
-        "ImgUrl": "https://i.pinimg.com/564x/85/13/09/8513094ac659e3ded9e056bfeba2e6c5.jpg",
-        "CreatorName": "Nala Goins",
-        "HighestBids": 5.75,
-        "countdownHours": 1,
-        "CreatorUrl": "https://i.pinimg.com/236x/f7/06/f5/f706f52fa0ccf505724b13306b0a9057.jpg",
-        "ProductName": "Lone Wanderer",
-        "isFollowing":false
-
-      },
-      {
-        "ImgUrl": "https://i.pinimg.com/236x/f0/95/8f/f0958fcc18e24e609257412cae0ae92a.jpg",
-        "CreatorName": "Joshua Wilson",
-        "HighestBids": 4.75,
-        "countdownHours": 1,
-        "CreatorUrl": "https://i.pinimg.com/236x/63/f4/52/63f4520af6501dd9b1cc35676252eea5.jpg",
-        "ProductName": "VividYouth",
-        "isFollowing":false
-
-      }
-    ]
-  }
-  
+  "auctiondata": [
+    {
+      "Date": "2023-09-19 14:00:00",
+      "Description": "Live auction for the stunning artwork 'Dead Man Walking' by the talented artist Jane Doe. This captivating piece explores themes of life and death through intricate details and vibrant colors.",
+      "Status": "live now",
+      "ImgUrl": "https://images.unsplash.com/photo-1654792393225-3e8a53d124d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDl8fG5mdCUyMGFydHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60",
+      "Bid": 1.25,
+      "Artist": "Jane Doe",
+      "ArtistUrl": "https://i.pinimg.com/236x/4d/33/92/4d3392b849bd5fc36527793e31386512.jpg",
+      "countdownHours": 10,
+      "Product": "Dead Man Walking",
+      "isSaved": false
+    },
+    {
+      "Date": "2023-09-20 10:00:00",
+      "Description": "Upcoming auction for the intriguing artwork 'Wavy Ape' by the renowned artist John Smith. This unique piece combines abstract elements with a touch of surrealism, promising to be a visual delight.",
+      "Status": "upcoming",
+      "ImgUrl": "https://i.pinimg.com/474x/2c/20/43/2c2043cb78cac77193070d1fac8ddadb.jpg",
+      "Bid": 0.01,
+      "Artist": "John Smith",
+      "ArtistUrl": "https://i.pinimg.com/236x/49/aa/e1/49aae1e414413eee95bfac5fa8327ad2.jpg",
+      "countdownHours": 5,
+      "Product": "Wavy Ape",
+      "isSaved": false
+    },
+    {
+      "Date": "2023-09-15 18:30:00",
+      "Description": "Ended auction for the enchanting artwork 'Mystic Forest' by the talented artist Alice Johnson. This mesmerizing piece takes you on a journey through a mystical and ancient woodland.",
+      "Status": "live now",
+      "ImgUrl": "https://cdn.pixabay.com/photo/2022/04/20/12/16/abstract-art-7145098_1280.jpg",
+      "Bid": 1.08,
+      "Artist": "Alice Johnson",
+      "ArtistUrl": "https://i.pinimg.com/236x/31/f0/9d/31f09d0fc48c1d8314272e1847e96ed8.jpg",
+      "countdownHours": 8,
+      "Product": "Mystic Forest",
+      "isSaved": false
+    },
+    {
+      "Date": "2023-09-12 12:45:00",
+      "Description": "Ended auction for the historical masterpiece 'Ancient Ruins' by the renowned artist Michael Brown. This evocative piece transports you to a bygone era of majestic ruins and secrets of the past.",
+      "Status": "ended",
+      "ImgUrl": "https://i.pinimg.com/236x/25/3a/6c/253a6c34a8093e207dc34b25d6b33d3b.jpg",
+      "Bid": 1.28,
+      "Artist": "Michael Brown",
+      "ArtistUrl": "https://i.pinimg.com/236x/c0/99/15/c099159849a5f3399e05335f2c56adca.jpg",
+      "countdownHours": 12,
+      "Product": "Ancient Ruins",
+      "isSaved": false
+    },
+    {
+      "Date": "2023-09-17 08:15:00",
+      "Description": "Live auction for the serene artwork 'Ocean Waves' by the talented artist Sarah Lee. Dive into the soothing blue hues and feel the calm of the ocean in this captivating masterpiece.",
+      "Status": "live now",
+      "ImgUrl": "https://i.pinimg.com/236x/65/2f/b0/652fb0944e56ba1f81503a3e25a9469e.jpg",
+      "Bid": 0.21,
+      "Artist": "Sarah Lee",
+      "ArtistUrl": "https://i.pinimg.com/236x/bc/db/4a/bcdb4a84f64a9c1b3e29064994e31862.jpg",
+      "countdownHours": 6,
+      "Product": "Ocean Waves",
+      "isSaved": false
+    },
+    {
+      "Date": "2023-09-10 15:30:00",
+      "Description": "Ended auction for the captivating cityscape 'Cityscape' by the talented artist David Clark. This urban masterpiece captures the vibrant energy of the city at twilight.",
+      "Status": "ended",
+      "ImgUrl": "https://i.pinimg.com/236x/05/a0/dc/05a0dc5e6ebd66a946c5a4e81d69048c.jpg",
+      "Bid": 3.17,
+      "Artist": "David Clark",
+      "ArtistUrl": "https://i.pinimg.com/236x/76/05/ab/7605ab036f99d17edb5e82ffd5370a43.jpg",
+      "countdownHours": 7,
+      "Product": "Cityscape",
+      "isSaved": false
+    },
+    {
+      "Date": "2023-09-14 20:00:00",
+      "Description": "Ended auction for the mesmerizing artwork 'Sunset Paradise' by the talented artist Emily White. Immerse yourself in the warm, golden hues of this paradise at sunset.",
+      "Status": "live now",
+      "ImgUrl": "https://i.pinimg.com/236x/df/29/3a/df293ad7446fcff4abbb9af00f998541.jpg",
+      "Bid": 149.68,
+      "Artist": "Emily White",
+      "ArtistUrl": "https://i.pinimg.com/236x/c3/ed/cd/c3edcd3e27113ef1a163fb19243cd625.jpg",
+      "countdownHours": 9,
+      "Product": "Sunset Paradise",
+      "isSaved": false
+    },
+    {
+      "Date": "2023-09-18 09:30:00",
+      "Description": "Live auction for the picturesque artwork 'Mountain Retreat' by the talented artist Olivia Green. Escape to the tranquil mountainside and find serenity in this stunning piece.",
+      "Status": "live now",
+      "ImgUrl": "https://i.pinimg.com/236x/e5/2c/cd/e52ccdf32e44139d369e80695f20254f.jpg",
+      "Bid": 0.1,
+      "Artist": "Olivia Green",
+      "ArtistUrl": "https://i.pinimg.com/236x/91/56/e8/9156e8099e9289954c5757bf1a094baa.jpg",
+      "countdownHours": 4,
+      "Product": "Mountain Retreat",
+      "isSaved": false
+    }
+  ],
+  "creators": [
+    {
+      "ImgUrl": "assets/images/creator3.jpg",
+      "CreatorName": "Elijah Johnson",
+      "HighestBids": 8.75,
+      "countdownHours": 1,
+      "CreatorUrl": "https://i.pinimg.com/236x/5c/b2/95/5cb2957841b960fe3e4ff18fd7a24490.jpg",
+      "ProductName": "Clone NFT",
+      "isFollowing": false
+    },
+    {
+      "ImgUrl": "https://i.pinimg.com/564x/85/13/09/8513094ac659e3ded9e056bfeba2e6c5.jpg",
+      "CreatorName": "Nala Goins",
+      "HighestBids": 5.75,
+      "countdownHours": 1,
+      "CreatorUrl": "https://i.pinimg.com/236x/f7/06/f5/f706f52fa0ccf505724b13306b0a9057.jpg",
+      "ProductName": "Lone Wanderer",
+      "isFollowing": false
+    },
+    {
+      "ImgUrl": "https://i.pinimg.com/236x/f0/95/8f/f0958fcc18e24e609257412cae0ae92a.jpg",
+      "CreatorName": "Joshua Wilson",
+      "HighestBids": 4.75,
+      "countdownHours": 1,
+      "CreatorUrl": "https://i.pinimg.com/236x/63/f4/52/63f4520af6501dd9b1cc35676252eea5.jpg",
+      "ProductName": "VividYouth",
+      "isFollowing": false
+    }
+  ]
+}

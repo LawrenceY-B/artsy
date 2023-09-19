@@ -11,6 +11,8 @@ import { CreatorcardComponent } from './components/creatorcard/creatorcard.compo
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LikebtnComponent } from './components/likebtn/likebtn.component';
 import { AutoScrollDirective } from './directives/auto-scroll.directive';
+import { DropsComponent } from './pages/drops/drops.component';
+import { DropsCardComponent } from './components/drops-card/drops-card.component';
 
 
 
@@ -19,10 +21,12 @@ import { AutoScrollDirective } from './directives/auto-scroll.directive';
     AuctionPageComponent,
     AuctionBoardComponent,
     LivebidsComponent,
+    DropsComponent,
     LivecardsComponent,
     LikebtnComponent,
     CreatorcardComponent,
-    AutoScrollDirective
+    AutoScrollDirective,
+    DropsCardComponent
     
 
   ],

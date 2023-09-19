@@ -1,1 +1,19 @@
-<p>drops works!</p>
+<section>
+    <div class="breadcrumbs">
+      <p routerLink="">Home/</p>
+      <p routerLink="/auction">Auctions/</p>
+      <p class="current">Drop</p>
+    </div>
+  
+    <div class="overview">
+     <div class="upcoming">
+        <h3>Upcoming drops</h3>
+        <p>Turn on notifications so that no drops will miss you.</p>
+        <button (click)="notify(path)">Notify me
+            <img #path src="assets/svgs/bell-outline.svg" alt="">
+        </button>
+     </div>
+     <app-drops-card></app-drops-card>
+    </div>
+  </section>
+  

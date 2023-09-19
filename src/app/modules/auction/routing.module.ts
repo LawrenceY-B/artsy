@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: '', component: AuctionBoardComponent, children : [
     {path:'', component:AuctionPageComponent },
     {path:'livebids', component:LivebidsComponent },
-    {path:'drops',component:DropsComponent}
+    {path:'drop',component:DropsComponent}
 
   ] },
 

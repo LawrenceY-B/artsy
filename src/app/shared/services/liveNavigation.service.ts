@@ -1,13 +1,13 @@
 import { Injectable } from "@angular/core";
-import { ILivecard } from "../model/auction.model";
+import { IAuctionData } from "../model/auction.model";
 
 @Injectable({
     providedIn: "root"
 })
 export class NavigationService{
-    private sharedData!: ILivecard ;
+    private sharedData!: IAuctionData ;
 
-    setSharedData(data: ILivecard){
+    setSharedData(data: IAuctionData){
         this.sharedData = data;
 
     }

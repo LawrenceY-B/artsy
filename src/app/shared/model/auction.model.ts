@@ -1,11 +1,14 @@
-export interface ILivecard {
-    ImgUrl: string;
-    Bid: number;
-    Artist: string;
-    ArtistUrl: string;
-    countdownHours: number;
-    Product: string;
-    isSaved: boolean;
+export interface IAuctionData {
+  Date: string;
+  Description: string;
+  Status: "live now" | "upcoming" | "ended";
+  ImgUrl: string;
+  Bid: number;
+  Artist: string;
+  ArtistUrl: string;
+  countdownHours: number;
+  Product: string;
+  isSaved: boolean;
   }
   
 export interface ICreator {
@@ -19,7 +22,7 @@ export interface ICreator {
   }
   
 export interface IAuctionModel {
-    livecards: ILivecard[];
+    auctiondata: IAuctionData[];
     creators: ICreator[];
   }
   

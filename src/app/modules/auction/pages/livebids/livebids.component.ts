@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { ILivecard } from 'src/app/shared/model/auction.model';
+import { IAuctionData } from 'src/app/shared/model/auction.model';
 import { IMessage } from 'src/app/shared/model/message.model';
 import { NavigationService } from 'src/app/shared/services/liveNavigation.service';
 
@@ -19,7 +19,7 @@ export class LivebidsComponent implements OnInit {
     this.display = 'Bid';
     console.log(this.display);
   }
-  result!: ILivecard;
+  result!: IAuctionData;
   display!: String;
   constructor(
     private Navigation: NavigationService,

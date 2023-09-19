@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { timer } from 'rxjs';
-import { ILivecard } from 'src/app/shared/model/auction.model';
+import { IAuctionData } from 'src/app/shared/model/auction.model';
 import { NavigationService } from 'src/app/shared/services/liveNavigation.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { NavigationService } from 'src/app/shared/services/liveNavigation.servic
   styleUrls: ['./livecards.component.scss'],
 })
 export class LivecardsComponent implements OnInit {
-  @Input() result!: ILivecard;
+  @Input() result!: IAuctionData;
 
   
   // @Input() Time!: Date;
