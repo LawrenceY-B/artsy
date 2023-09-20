@@ -1,5 +1,8 @@
 <div class="container">
   <div class="imgContainer">
+    <button class="imgstatus" *ngIf="result.Status === 'live now'"  [ngClass]="{'live': result.Status === 'live now'}">Live Now</button>
+    <button class="imgstatus" *ngIf="result.Status === 'upcoming'" [ngClass]="{'upcoming': result.Status === 'upcoming'}" >Upcoming</button>
+    <button class="imgstatus" *ngIf="result.Status === 'ended'" [ngClass]="{'ended': result.Status === 'ended'}">Ended</button>
     <img [src]="result.ImgUrl" alt="" />
   </div>
   <div class="detailsContainer">

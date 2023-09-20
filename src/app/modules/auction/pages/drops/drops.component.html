@@ -13,6 +13,16 @@
             <img #path src="assets/svgs/bell-outline.svg" alt="">
         </button>
      </div>
+     <div class="sort">
+     
+      <select name="" id="" class="filter">
+        <option value="" hidden>Sort By</option>
+        <option value="">Live</option>
+        <option value="">Upcoming</option>
+        <option value="">Ended</option>
+      </select>
+      
+    </div>
      <div class="drops">
       <div *ngFor="let item of AuctionData" >
         <app-drops-card [result]="item"></app-drops-card>

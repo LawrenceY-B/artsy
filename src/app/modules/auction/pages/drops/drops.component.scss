@@ -54,6 +54,18 @@ section {
         }
       }
     }
+    .sort{
+      display: none;
+      align-self: flex-end;
+      margin-right: 15px;
+      select {
+        background-color: #f4f2f2;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        background-color: transparent;
+      }
+    }
     .drops{
       display: flex;
       flex-direction: column;
@@ -81,6 +93,7 @@ section {
   section {
     padding: 0px 0px 0px 0px;
     margin-left: 0px;
+    
     .breadcrumbs {
       margin-bottom: 10px;
       p {
@@ -89,11 +102,15 @@ section {
     }
     .overview {
       align-items: flex-start;
+      gap: 10px;
       .upcoming{
         align-self: center;
       }
+      .sort{display: block;}
       .drops{
-        gap: 20px;
+        width: 100%;
+        align-items: center;
+        gap: 100px;
       }
     }
   }

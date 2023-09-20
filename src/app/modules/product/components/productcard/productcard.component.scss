@@ -78,6 +78,8 @@ article > div {
     .container{
         flex-direction: column;
         padding: 5px;
+        width: 100%;
+        align-self: center;
         figure{
             width: 100%;
         }
@@ -85,6 +87,8 @@ article > div {
     .reverse-flex{
         padding: 5px;
         flex-direction: column;
+        width: 100%;
+        align-self: center;
         figure{
             width: 100%;
         }
@@ -92,6 +96,10 @@ article > div {
     article{
         padding: 0px;
         width: 100%;
+        p{
+          font-size: 12px;
+          color: #7b7b7b
+        }
     }
 
 }

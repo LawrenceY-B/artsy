@@ -5,6 +5,7 @@ main,
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100vw;
   .section1 {      background-color: white;
 
     justify-content: space-evenly;
@@ -85,10 +86,22 @@ main,
   main,
   .section1,
   .section2 {
-    .section1 {
-      h1 {
-        font-size: 32px;
-        width: 95%;
+    width: 100vw;
+    .section1 {     
+      * {
+        padding: 10px 0px;
+      }
+      h4 {
+        font-family: "CD SemiBold";
+        font-size: 48px;
+   
+        line-height: 50px;
+        text-align: center;
+      }
+      p {
+        font-size: 14px;
+        width: 75%;
+        text-align: center;
       }
     }
   }
