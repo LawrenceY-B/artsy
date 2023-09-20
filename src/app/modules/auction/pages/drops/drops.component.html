@@ -13,7 +13,13 @@
             <img #path src="assets/svgs/bell-outline.svg" alt="">
         </button>
      </div>
-     <app-drops-card></app-drops-card>
+     <div class="drops">
+      <div *ngFor="let item of AuctionData" >
+        <app-drops-card [result]="item"></app-drops-card>
+       </div>
+     </div>
+    
+   
     </div>
   </section>
   

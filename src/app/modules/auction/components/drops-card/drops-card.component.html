@@ -1,13 +1,19 @@
 <div class="container">
-    <div class="imgContainer">
-        <img src="" alt="">
-    </div>
-    <div class="detailsContainer">
-        <button class="status"></button>
-        <p class="time"></p>
-        <h3 class="title"></h3>
-        <p class="description"></p>
-        <p class="creator"></p>
-        <p class="action"></p>
-    </div>
+  <div class="imgContainer">
+    <img [src]="result.ImgUrl" alt="" />
+  </div>
+  <div class="detailsContainer">
+    <button class="status" *ngIf="result.Status === 'live now'"  [ngClass]="{'live': result.Status === 'live now'}">Live Now</button>
+    <button class="status" *ngIf="result.Status === 'upcoming'" [ngClass]="{'upcoming': result.Status === 'upcoming'}" >Upcoming</button>
+    <button class="status" *ngIf="result.Status === 'ended'" [ngClass]="{'ended': result.Status === 'ended'}">Ended</button>
+    <p class="time">{{ result.Date | date :"MMMM d 'at' h:mm a O" }}</p>
+    <h3 class="title">{{ result.Product }}</h3>
+    <p class="description">
+      {{ result.Description }}
+    </p>
+    <span class="creator"><h4>Creator: </h4><p>{{ result.Artist }}</p></span>
+    <p class="action" *ngIf="result.Status === 'live now'"> Join Now</p>
+    <p class="action" *ngIf="result.Status === 'upcoming'"> Get Notified</p>
+    <p class="action" *ngIf="result.Status === 'ended'"> View Auction</p>
+  </div>
 </div>
