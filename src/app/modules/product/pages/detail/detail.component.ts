@@ -17,6 +17,8 @@ export class DetailComponent implements OnInit {
   Products: IShop[] = [];
   ProductData!: IShop;
   SimilarCollection!:IShop[]
+  displayedCards: IShop[] = [];
+
   id!: number;
   constructor(private route: ActivatedRoute,
     private ProductService: AuctionService) {}
@@ -30,6 +32,8 @@ export class DetailComponent implements OnInit {
       this.Products = data.shop;
       this.ProductData = this.Products.find((item) => item.id === this.id)!
       this.SimilarCollection= this.Products.filter((item) =>item.product.category === this.ProductData.product.category)
+      this.updateDisplayedCards();
+
       console.table(this.Products);
     })
 
@@ -75,5 +79,28 @@ export class DetailComponent implements OnInit {
       path.style.fill = '#fff';
       path.style.stroke = '#bcb7b7';
     }
+  }
+  currentSlide=0
+  cardsPerPage = 3;
+
+  onPreviousClick() {
+    this.currentSlide = (this.currentSlide - 1 + this.SimilarCollection.length) % this.SimilarCollection.length;
+    console.log('previous clicked, new current slide is: ', this.currentSlide);
+    this.updateDisplayedCards()
+  }
+  
+  onNextClick() {
+    this.currentSlide = (this.currentSlide + 1) % this.SimilarCollection.length;
+    console.log('next clicked, new current slide is: ', this.currentSlide);
+    this.updateDisplayedCards()
+  }
+  
+  updateDisplayedCards() {
+    this.displayedCards = [];
+    for (let i = this.currentSlide; i < this.currentSlide + this.cardsPerPage; i++) {
+      const index = i % this.SimilarCollection.length;
+      this.displayedCards.push(this.SimilarCollection[index]);
+    }
+    
   }
 }

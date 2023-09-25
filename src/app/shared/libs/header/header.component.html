@@ -1,5 +1,5 @@
 <header class="header" #header>
-  
+  <div ngClass="min-section">
   <div><h1>Artsy.</h1></div>
 
   <div
@@ -13,6 +13,7 @@
     <span class="line"></span>
   </div>
 
+
   <div class="menu" [class.active]="menuOpen">
     <div *ngFor="let nav of navigation">
       <a [routerLink]="'/' + nav.tag" routerLinkActive="router-link-active">
@@ -20,10 +21,11 @@
       </a>
     </div>
   </div>
+</div>
   <div class="icons">
     <img src="/assets/svgs/Search.svg" alt="search" />
-    <img src="/assets/svgs/cart-outline.svg" alt="cart" />
-    <img src="/assets/svgs/bell-outline.svg" alt="notification" />
+    <img src="/assets/svgs/cart-outline.svg" alt="cart"  />
+    <img src="/assets/svgs/bell-outline.svg" alt="notification" class="notification"/>
 
   </div>
 </header>

@@ -66,11 +66,7 @@
       <span class="description" *ngIf="descriptiontoggle">
         <p>
           {{ProductData.description}}
-          <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          voluptatum, quibusdam, voluptate, quia voluptas quod quos
-          exercitationem voluptatibus quas quidem doloribus. Quisquam
-          voluptatum, quibusdam, voluptate, quia voluptas quod quos
-          exercitationem voluptatibus quas quidem doloribus. -->
+
         </p>
       </span>
     </div>
@@ -125,13 +121,13 @@
   <div class="exploresection">
     <p>Explore More From This Collection</p>
     <div class="navbtnsection">
-      <img src="assets/svgs/chevron-left.svg" alt="left" />
-      <img src="assets/svgs/chevron-right.svg" alt="right" />
+      <img src="assets/svgs/chevron-left.svg" alt="left" (click)="onPreviousClick()"/>
+      <img src="assets/svgs/chevron-right.svg" alt="right" (click)="onNextClick()" />
     </div>
   </div>
   <div class="bottomSection">
     <div class="scrollSection">
-      <div *ngFor="let item of SimilarCollection">
+      <div *ngFor="let item of displayedCards">
         <app-product-card
         [Product]="item"
         routerLink="/details"

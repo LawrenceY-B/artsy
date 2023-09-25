@@ -98,6 +98,13 @@ section {
       .bids {
         gap: 20px;
       }
+      img{
+        width: 30px;
+        height: 30px;
+        top: 40%;
+        z-index: 5;
+      }
+      
     }
     .creators {
       .creatorSection {

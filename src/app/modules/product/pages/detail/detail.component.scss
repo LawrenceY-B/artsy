@@ -28,7 +28,6 @@ section {
   .productContainer {
     align-self: center;
     display: grid;
-    height: 75vh;
     width: 70vw;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr repeat(4, minmax(1fr, 250px));
@@ -52,7 +51,7 @@ section {
         font-size: 28px;
         font-family: "Satoshi Bold";
       }
-      .currency{
+      .currency {
         font-size: 20px;
         font-family: "Baskervville";
       }
@@ -220,8 +219,7 @@ section {
       display: flex;
       flex-direction: row;
       gap: 20px;
-      overflow-y: hidden;
-      overflow-x: scroll;
+    overflow: hidden;
       width: 70vw;
       padding: 10px;
       scroll-behavior: smooth;
@@ -235,6 +233,82 @@ section {
       background-color: transparent;
       width: 100px;
       margin-bottom: 40px;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  section {
+    padding: 0;
+    flex-direction: column;
+    gap: 15px;
+    .breadcrumbs {
+      margin: 10px;
+      p {
+        margin: 0;
+      }
+    }
+    .productContainer {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 98vw;
+      align-self: center;
+
+      div {
+        border: none;
+      }
+      .productTitle {
+        .title {
+          font-size: 18px;
+        }
+        .currency {
+          font-size: 16px;
+        }
+      }
+      .longpanel {
+        img {
+          width: 100%;
+          height: 40vh;
+        }
+      }
+      .mainInfo {
+        gap: 15px;
+        .creator {
+          font-size: 16px;
+          display: flex;
+          gap: 3px;
+        }
+        .Count {
+          font-size: 16px;
+          align-items: center;
+          img {
+            width: 16px;
+            height: 16px;
+          }
+        }
+        .cartContainer {
+          margin: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+      .basicinfo,
+      .bottomInfo,
+      .mainInfo {
+        .infoheader {
+          p {
+            font-size: 16px;
+          }
+          .dropdown {
+            width: 14px;
+            height: 14px;
+          }
+        }
+      }
+    }
+    .exploresection {
+      width: 95vw;
     }
   }
 }

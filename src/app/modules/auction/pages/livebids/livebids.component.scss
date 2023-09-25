@@ -264,8 +264,8 @@ main {
       }
     }
   }
-  span{
-    h2{
+  span {
+    h2 {
       font-size: 18px;
       font-family: "Satoshi Bold";
       margin: 0;
@@ -274,11 +274,29 @@ main {
     align-items: center;
     justify-content: center;
     gap: 40px;
-    img{
-        width: 40px;
-        height: 40px;
-
+    img {
+      width: 40px;
+      height: 40px;
     }
-
+  }
+}
+@media only screen and (max-width: 768px) {
+  section {
+    .liveContainer {
+      flex-direction: column;
+      .imgContainer {
+        width: 100% !important;
+      }
+      .chatContainer {
+        height: 50%;
+        width: 100% !important;
+        .chat-message-container {
+          height: 100%;
+        }
+        .chatBox {
+          max-height: 220px;
+        }
+      }
+    }
   }
 }
