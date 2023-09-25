@@ -27,15 +27,52 @@ section {
     }
   }
   .overview {
-    width: 95%;
+    width: 97%;
 
     .bids {
-      padding: 10px;
+      height: max(400px);
       width: 100%;
       display: flex;
-      gap: 60px;
-      overflow-x: scroll;
+      /* gap: 40px; */
+      overflow: hidden;
+      align-items: center;
+      justify-content: space-around;
+
+
     }
+    .carousel{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+.current-slide {
+  transition: all 0.1s ease-in-out;
+  transform: scale(1.1) translateY(-10px);
+  z-index: 5;
+}
+
+    img{
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%);
+    }
+    .imgprev{
+      transform:rotate(180deg);
+      left:10px;
+    }
+    .imgnext{
+      right: -5px;
+      z-index: 3;
+    }
+
+    // app-livecards{
+    //   position: absolute;
+    //   top: 0;
+    //   left: 30%;
+    // }
   }
   .creators {
     display: flex;
@@ -72,26 +109,25 @@ section {
   }
 }
 
-// @media only screen and (max-width: 768px){
-//     .section{
-//         overflow-x:hidden ;
-//         margin: 0px;
-//         .breadcrumbs{
-//             display: none;
-//         }
-//         .overview{
-//             width: 100%;
-//             .bids{
-//                 gap: 20px;
-//             }
-//         }
-//         .creators{
-//             .creatorSection{
-//                 display: flex;
-//                 flex-direction: column;
-//                 gap: 20px;
-//             }
-//         }
-//     }
 
-// }
+@media screen and (min-width: 1920px) {
+  section {
+    .breadcrumbs {
+      p {
+        font-size: 20px;
+      }
+    }
+    .overview {
+      width: 100vw;
+      .bids {
+        gap: 70px;
+      }
+      img{
+        width: 50px;
+        height: 50px;
+        top: 40%;
+        z-index: 5;
+      }
+    }
+  }
+}

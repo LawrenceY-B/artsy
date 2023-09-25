@@ -7,20 +7,30 @@
   <div class="overview">
     <h3>Here’s an overview of products actively on auction, explore!</h3>
     <div class="bids">
-      <div *ngFor="let items of LiveAuction">
-        <app-livecards
-        [result]="items"          
-        ></app-livecards>
+      <img
+        src="/assets/svgs/nextbtn.svg"
+        class="imgprev"
+        alt="previous"
+        (click)="onPreviousClick()"
+      />
+      <img
+        src="/assets/svgs/nextbtn.svg"
+        alt="next"
+        class="imgnext"
+        (click)="onNextClick()"
+      />
+      <div *ngFor="let items of displayedCards; let i = index">
+        <div class="carousel" [ngClass]="{'current-slide': i === highlight +1}">
+          <app-livecards [result]="items"></app-livecards>
+        </div>
       </div>
     </div>
   </div>
   <div class="creators">
     <h3>Top bids from popular creators</h3>
-    <div class="creatorSection" >
+    <div class="creatorSection">
       <div *ngFor="let item of CreatorData">
-        <app-creatorcard
-        [Result]="item"
-      ></app-creatorcard>
+        <app-creatorcard [Result]="item"></app-creatorcard>
       </div>
     </div>
   </div>

@@ -4,7 +4,7 @@
   </section>
   <section>
     <div class="results">
-      <p class="resultText" style="margin :0 ">See 1-6 of 15 results</p>
+      <p class="resultText" style="margin: 0">See 1-6 of {{Total}} results</p>
       <select name="" id="" class="filter">
         <option value="" hidden>Filters</option>
         <option value="">Category</option>
@@ -24,52 +24,15 @@
       </select>
     </div>
     <div class="grid-box">
-      <app-product-card
-        [ImgUrl]="
-          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
-        "
-      ></app-product-card>
-      <app-product-card
-        [ImgUrl]="
-          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
-        "
-      ></app-product-card
-      ><app-product-card
-        [ImgUrl]="
-          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
-        "
-      ></app-product-card
-      ><app-product-card
-        [ImgUrl]="
-          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
-        "
-      ></app-product-card
-      ><app-product-card
-        [ImgUrl]="
-          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
-        "
-      ></app-product-card
-      ><app-product-card
-        [ImgUrl]="
-          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
-        "
-      ></app-product-card
-      ><app-product-card
-        [ImgUrl]="
-          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
-        "
-      ></app-product-card
-      ><app-product-card
-        [ImgUrl]="
-          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
-        "
-      ></app-product-card
-      ><app-product-card
-        [ImgUrl]="
-          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
-        "
-      ></app-product-card>
+      <div *ngFor="let item of MainView">
+        <app-product-card
+          [Product]="item"
+      ></app-product-card> 
+      </div>
+    
     </div>
     <button>See More</button>
   </section>
 </aside>
+ <!-- (addToCart)="addToCart($event)"
+          (addToWishlist)="addToWishlist($event)" -->

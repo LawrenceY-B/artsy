@@ -125,5 +125,365 @@
       "ProductName": "VividYouth",
       "isFollowing": false
     }
+  ],
+
+  "shop": [
+    {
+      "id": 1,
+      "product": {
+        "name": "Mystical Twilight Symphony",
+        "price": 10.99,
+        "creator": {
+          "name": "Julius Smith",
+          "socials": {
+            "instagram": "https://www.instagram.com/creatorA/",
+            "twitter": "https://twitter.com/creatorA",
+            "linkedin": "https://www.linkedin.com/in/creatorA/"
+          }
+        },
+        "madeIn": "Made in France",
+        "totalViews": 500,
+        "productstatus": "In Stock",
+        "imgUrl": "https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80",
+        "category": "Arts & Culture"
+      },
+      "description": "'Mystical Twilight Symphony' is a captivating oil painting by the renowned artist Julius Smith. This masterpiece captures the enchanting blend of twilight hues, creating a mystical symphony of colors that transports you to a world of wonder and imagination.",
+      "listings": {
+        "medium": "Oil on Canvas",
+        "dimensions": "24 inches (height) x 36 inches (width)",
+        "year": "2022",
+        "style": "Realism",
+        "framing": "Framed"
+      },
+      "status": "In Stock"
+    },
+    {
+      "id": 2,
+      "product": {
+        "name": "Harmony in Hues",
+        "price": 20.99,
+        "creator": {
+          "name": "Alicia Keys",
+          "socials": {
+            "instagram": "https://www.instagram.com/creatorB/",
+            "twitter": "https://twitter.com/creatorB",
+            "linkedin": "https://www.linkedin.com/in/creatorB/"
+          }
+        },
+        "madeIn": "Made in Spain",
+        "totalViews": 800,
+        "productstatus": "In Stock",
+        "imgUrl": "https://i.pinimg.com/236x/a8/28/f7/a828f7a1f83974c71d32e7228afe9e8a.jpg",
+        "category": "Arts & Culture"
+      },
+      "description": "Immerse yourself in the world of 'Harmony in Hues,' a captivating watercolor creation by the talented Alicia Keys. This artwork, alive with vivid colors and artistic expression, invites you to explore the beauty of impressionism and the free-flowing strokes of creativity.",
+      "listings": {
+        "medium": "Watercolor on Paper",
+        "dimensions": "18 inches (height) x 24 inches (width)",
+        "year": "2021",
+        "style": "Impressionism",
+        "framing": "Unframed"
+      },
+      "status": "In Stock"
+    },
+    {
+      "id": 3,
+      "product": {
+        "name": "Scenic Oasis",
+        "price": 49.99,
+        "creator": {
+          "name": "Olivia Parker",
+          "socials": {
+            "instagram": "https://www.instagram.com/creatorC/",
+            "twitter": "https://twitter.com/creatorC",
+            "linkedin": "https://www.linkedin.com/in/creatorC/"
+          }
+        },
+        "madeIn": "Made in Italy",
+        "totalViews": 1200,
+        "productstatus": "In Stock",
+        "imgUrl": "https://i.pinimg.com/236x/83/f1/0b/83f10b4ad36f67543ff7543bc68aa0c3.jpg",
+        "category": "Nature"
+      },
+      "description": "Escape to the tranquil 'Scenic Oasis' with this mesmerizing landscape painting. Artist Olivia Parker's brushwork captures the serenity of nature's beauty.",
+      "listings": {
+        "medium": "Oil on Canvas",
+        "dimensions": "36 inches (height) x 48 inches (width)",
+        "year": "2022",
+        "style": "Realism",
+        "framing": "Framed"
+      },
+      "status": "In Stock"
+    },
+
+    {
+      "id": 4,
+      "product": {
+        "name": "The Literary Voyage",
+        "price": 29.99,
+        "creator": {
+          "name": "Eleanor Bennett",
+          "socials": {
+            "instagram": "https://www.instagram.com/creatorD/",
+            "twitter": "https://twitter.com/creatorD",
+            "linkedin": "https://www.linkedin.com/in/creatorD/"
+          }
+        },
+        "madeIn": "Made in the USA",
+        "totalViews": 950,
+        "productstatus": "In Stock",
+        "imgUrl": "https://i.pinimg.com/736x/5d/a9/83/5da9834c9c0af9882cabb5edd604308b.jpg",
+        "category": "Arts & Culture"
+      },
+      "description": "Embark on 'The Literary Voyage' with this exquisite book collection curated by Eleanor Bennett. Immerse yourself in the world of literature's greatest classics.",
+      "listings": {
+        "medium": "Hardcover Books",
+        "dimensions": "Various Sizes",
+        "year": "2023",
+        "style": "Literary Classics",
+        "framing": "Not Applicable"
+      },
+      "status": "In Stock"
+    },
+
+    {
+      "id": 5,
+      "product": {
+        "name": "Haute Couture Elegance",
+        "price": 399.99,
+        "creator": {
+          "name": "Sophie Laurent",
+          "socials": {
+            "instagram": "https://www.instagram.com/creatorE/",
+            "twitter": "https://twitter.com/creatorE",
+            "linkedin": "https://www.linkedin.com/in/creatorE/"
+          }
+        },
+        "madeIn": "Made in France",
+        "totalViews": 550,
+        "productstatus": "In Stock",
+        "imgUrl": "https://i.pinimg.com/236x/4f/db/7d/4fdb7dad583c5660f0657a5f6b107b70.jpg",
+        "category": "Fashion"
+      },
+      "description": "Experience 'Haute Couture Elegance' with this exquisite designer gown by Sophie Laurent. A true masterpiece of fashion, it's a statement of luxury and style.",
+      "listings": {
+        "medium": "Silk and Embroidery",
+        "dimensions": "Custom Fit",
+        "year": "2023",
+        "style": "High Fashion",
+        "framing": "Not Applicable"
+      },
+      "status": "Out of Stock"
+    },
+
+    {
+      "id": 6,
+      "product": {
+        "name": "Majestic Wilderness",
+        "price": 79.99,
+        "creator": {
+          "name": "David Anderson",
+          "socials": {
+            "instagram": "https://www.instagram.com/creatorF/",
+            "twitter": "https://twitter.com/creatorF",
+            "linkedin": "https://www.linkedin.com/in/creatorF/"
+          }
+        },
+        "madeIn": "Made in Canada",
+        "totalViews": 720,
+        "productstatus": "In Stock",
+        "imgUrl": "https://i.pinimg.com/236x/72/6c/7f/726c7fb1ced4c3a04a2e7d10f1ab5764.jpg",
+        "category": "Nature"
+      },
+      "description": "Capture the essence of the 'Majestic Wilderness' with this breathtaking wildlife photography print by David Anderson. Experience the untamed beauty of nature.",
+      "listings": {
+        "medium": "Photography Print",
+        "dimensions": "24 inches (height) x 36 inches (width)",
+        "year": "2022",
+        "style": "Wildlife Photography",
+        "framing": "Not Framed"
+      },
+      "status": "In Stock"
+    },
+
+    {
+      "id": 7,
+      "product": {
+        "name": "Sculpted Harmony",
+        "price": 129.99,
+        "creator": {
+          "name": "Lucia Rodriguez",
+          "socials": {
+            "instagram": "https://www.instagram.com/creatorG/",
+            "twitter": "https://twitter.com/creatorG",
+            "linkedin": "https://www.linkedin.com/in/creatorG/"
+          }
+        },
+        "madeIn": "Made in Spain",
+        "totalViews": 880,
+        "productstatus": "In Stock",
+        "imgUrl": "https://i.pinimg.com/236x/ba/23/2e/ba232e50bf470f678fd7433d4b2b3e2a.jpg",
+        "category": "Arts & Culture"
+      },
+      "description": "Discover 'Sculpted Harmony,' a captivating sculpture by Lucia Rodriguez. Its graceful lines and fluid form evoke a sense of serenity and balance.",
+      "listings": {
+        "medium": "Sculpture",
+        "dimensions": "12 inches (height) x 10 inches (width) x 8 inches (depth)",
+        "year": "2023",
+        "style": "Abstract Sculpture",
+        "framing": "Not Applicable"
+      },
+      "status": "In Stock"
+    },
+
+    {
+      "id": 8,
+      "product": {
+        "name": "Ink and Imagination",
+        "price": 19.99,
+        "creator": {
+          "name": "Liam Wilson",
+          "socials": {
+            "instagram": "https://www.instagram.com/creatorH/",
+            "twitter": "https://twitter.com/creatorH",
+            "linkedin": "https://www.linkedin.com/in/creatorH/"
+          }
+        },
+        "madeIn": "Made in the USA",
+        "totalViews": 620,
+        "productstatus": "In Stock",
+        "imgUrl": "https://i.pinimg.com/236x/5f/d0/eb/5fd0ebb514f0a6454089439f1ba72450.jpg",
+        "category": "Editorials"
+      },
+      "description": "Dive into the world of 'Ink and Imagination' with this collection of thought-provoking essays by Liam Wilson. It's a journey through creativity, art, and innovation.",
+      "listings": {
+        "medium": "Paperback Book",
+        "dimensions": "6 inches (height) x 9 inches (width)",
+        "year": "2023",
+        "style": "Editorial Essays",
+        "framing": "Not Applicable"
+      },
+      "status": "In Stock"
+    },
+
+    {
+      "id": 9,
+      "product": {
+        "name": "Ethereal Beauty",
+        "price": 69.99,
+        "creator": {
+          "name": "Aria Mitchell",
+          "socials": {
+            "instagram": "https://www.instagram.com/creatorI/",
+            "twitter": "https://twitter.com/creatorI",
+            "linkedin": "https://www.linkedin.com/in/creatorI/"
+          }
+        },
+        "madeIn": "Made in France",
+        "totalViews": 480,
+        "productstatus": "In Stock",
+        "imgUrl": "https://i.pinimg.com/236x/21/0e/67/210e67913cd18827873172c897e00d11.jpg",
+        "category": "Fashion"
+      },
+      "description": "Indulge in 'Ethereal Beauty' with this enchanting evening gown by Aria Mitchell. Its ethereal design and intricate lacework make it a symbol of elegance.",
+      "listings": {
+        "medium": "Lace and Tulle",
+        "dimensions": "Custom Fit",
+        "year": "2023",
+        "style": "Haute Couture",
+        "framing": "Not Applicable"
+      },
+      "status": "In Stock"
+    },
+
+    {
+      "id": 10,
+      "product": {
+        "name": "Aqua Serenity",
+        "price": 34.99,
+        "creator": {
+          "name": "Natalie Roberts",
+          "socials": {
+            "instagram": "https://www.instagram.com/creatorJ/",
+            "twitter": "https://twitter.com/creatorJ",
+            "linkedin": "https://www.linkedin.com/in/creatorJ/"
+          }
+        },
+        "madeIn": "Made in the USA",
+        "totalViews": 890,
+        "productstatus": "In Stock",
+        "imgUrl": "https://i.pinimg.com/236x/bc/40/2d/bc402ddf62c67ecf256a926c691298de.jpg",
+        "category": "Nature"
+      },
+      "description": "Relax and rejuvenate with 'Aqua Serenity,' a soothing underwater photography print by Natalie Roberts. Dive into the tranquil depths of the ocean from the comfort of your home.",
+      "listings": {
+        "medium": "Photography Print",
+        "dimensions": "16 inches (height) x 20 inches (width)",
+        "year": "2022",
+        "style": "Underwater Photography",
+        "framing": "Not Framed"
+      },
+      "status": "In Stock"
+    },
+    {
+      "id": 11,
+      "product": {
+        "name": "Rhythmic Expressions",
+        "price": 59.99,
+        "creator": {
+          "name": "Carlos Hernandez",
+          "socials": {
+            "instagram": "https://www.instagram.com/creatorK/",
+            "twitter": "https://twitter.com/creatorK",
+            "linkedin": "https://www.linkedin.com/in/creatorK/"
+          }
+        },
+        "madeIn": "Made in Mexico",
+        "totalViews": 720,
+        "productstatus": "In Stock",
+        "imgUrl": "https://i.pinimg.com/236x/7c/18/ff/7c18ff932bd78fb1de5593d311abfc1a.jpg",
+        "category": "Arts & Culture"
+      },
+      "description": "Immerse yourself in 'Rhythmic Expressions,' a series of vibrant abstract paintings by Carlos Hernandez. Each piece captures the energy of life through dynamic colors and shapes.",
+      "listings": {
+        "medium": "Acrylic on Canvas",
+        "dimensions": "20 inches (height) x 20 inches (width)",
+        "year": "2023",
+        "style": "Abstract Art",
+        "framing": "Not Framed"
+      },
+      "status": "In Stock"
+    },
+    
+    {
+      "id": 12,
+      "product": {
+        "name": "Urban Explorer's Guide",
+        "price": 24.99,
+        "creator": {
+          "name": "Elena Russo",
+          "socials": {
+            "instagram": "https://www.instagram.com/creatorL/",
+            "twitter": "https://twitter.com/creatorL",
+            "linkedin": "https://www.linkedin.com/in/creatorL/"
+          }
+        },
+        "madeIn": "Made in the USA",
+        "totalViews": 620,
+        "productstatus": "In Stock",
+        "imgUrl": "https://i.pinimg.com/236x/2f/dc/7a/2fdc7adadad07db58edf2b0cb17b9d17.jpg",
+        "category": "Editorials"
+      },
+      "description": "Navigate the city's hidden gems with 'Urban Explorer's Guide' by Elena Russo. This comprehensive guidebook reveals the secrets of urban exploration and adventure.",
+      "listings": {
+        "medium": "Paperback Book",
+        "dimensions": "5.5 inches (height) x 8.5 inches (width)",
+        "year": "2023",
+        "style": "Adventure Guide",
+        "framing": "Not Applicable"
+      },
+      "status": "In Stock"
+    }
+    
   ]
 }

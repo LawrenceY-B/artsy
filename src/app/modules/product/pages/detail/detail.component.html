@@ -8,24 +8,24 @@
   <div class="productContainer">
     <div class="longpanel">
       <img
-        src="https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80"
+        [src]='ProductData.product.imgUrl'
         alt=""
       />
     </div>
     <div class="productTitle">
-      <p class="title">Product Name</p>
-      <p class="currency">$0.00</p>
+      <p class="title">{{ProductData.product.name}}</p>
+      <p class="currency">${{ProductData.product.price}}</p>
     </div>
     <div class="mainInfo">
       <span class="creator">
         <p>Creator :</p>
-        <p [ngStyle]="{ color: '#4693ED' }">Creator Name</p></span
+        <p [ngStyle]="{ color: '#4693ED' }">{{ProductData.product.creator.name}}</p></span
       >
       <p>Made in Italy</p>
-      <p style="font-size: 18px"><b>Total Views: 1.5k views</b></p>
+      <p style="font-size: 18px"><b>Total Views: {{ProductData.product.totalViews}}</b></p>
       <span class="Count">
         <img src="assets/svgs/plus.svg" alt="" (click)="add()" />
-        <p>{{ OrderNo }}</p>
+        <p>{{OrderNo}}</p>
         <img src="assets/svgs/minus.svg" alt="" (click)="remove()" />
       </span>
       <span class="cartContainer">
@@ -65,11 +65,12 @@
       /></span>
       <span class="description" *ngIf="descriptiontoggle">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          {{ProductData.description}}
+          <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           voluptatum, quibusdam, voluptate, quia voluptas quod quos
           exercitationem voluptatibus quas quidem doloribus. Quisquam
           voluptatum, quibusdam, voluptate, quia voluptas quod quos
-          exercitationem voluptatibus quas quidem doloribus.
+          exercitationem voluptatibus quas quidem doloribus. -->
         </p>
       </span>
     </div>
@@ -86,16 +87,16 @@
       /></span>
       <span class="listing" *ngIf="listingstoggle">
         <ul>
-          <li><strong>Medium:</strong><span>Acrylic on Canvas</span></li>
+          <li><strong>Medium:</strong><span>{{ProductData.listings.medium}}</span></li>
           <li>
             <strong>Dimensions:</strong
-            ><span>36 inches (height) x 48 inches (width)</span>
+            ><span>{{ProductData.listings.dimensions}}</span>
           </li>
-          <li><strong>Year:</strong><span>2023</span></li>
-          <li><strong>Style:</strong><span>Abstract</span></li>
+          <li><strong>Year:</strong><span>{{ProductData.listings.year}}</span></li>
+          <li><strong>Style:</strong><span>{{ProductData.listings.style}}</span></li>
           <li>
             <strong>Framing:</strong
-            ><span>Unframed (Can be framed upon request)</span>
+            ><span>{{ProductData.listings.framing}}</span>
           </li>
         </ul>
       </span>
@@ -112,10 +113,10 @@
           alt="Menu icon"
       /></span>
       <span class="status" *ngIf="statustoggle">
-        <button class="available" *ngIf="productstatus === 'In Stock'">
+        <button class="available" *ngIf="ProductData.status === 'In Stock'">
           Available
         </button>
-        <button class="unavailable" *ngIf="productstatus === 'Out of Stock'">
+        <button class="unavailable" *ngIf="ProductData.status === 'Out of Stock'">
           Out of Stock
         </button>
       </span>
@@ -130,37 +131,14 @@
   </div>
   <div class="bottomSection">
     <div class="scrollSection">
-      <app-product-card
-        [ImgUrl]="
-          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
-        "
+      <div *ngFor="let item of SimilarCollection">
+        <app-product-card
+        [Product]="item"
         routerLink="/details"
       ></app-product-card>
-      <app-product-card
-        [ImgUrl]="
-          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
-        "
-        routerLink="/details"
-      ></app-product-card>
-      <app-product-card
-        [ImgUrl]="
-          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
-        "
-        routerLink="/details"
-      ></app-product-card>
-      <app-product-card
-        [ImgUrl]="
-          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
-        "
-        routerLink="/details"
-      ></app-product-card>
-      <app-product-card
-        [ImgUrl]="
-          'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2066&q=80'
-        "
-        routerLink="/details"
-      ></app-product-card>
-    </div>
+      </div>
+    
+          </div>
     <button>Explore All</button>
   </div>
 </section>

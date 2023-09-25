@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { IShop } from '../../model/auction.model';
 
 @Component({
   selector: 'app-product-card',
@@ -7,17 +8,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./product-card.component.scss']
 })
 export class ProductCardComponent implements OnInit {
-  @Input() Name: string= "Product Name";
-  @Input() Price: string= "$0.00";
-  @Input() ImgUrl: string = ""
+  @Input() Product!: IShop
 
 
   constructor(
     private router: Router
   ) { }
-Navigate(){
-  this.router.navigate(['/details'])
-}
+
   ngOnInit(): void {
   }
 

@@ -1,11 +1,11 @@
-<div class="card" (click)="Navigate()">
-  <img class="card-image" [src]="ImgUrl" alt="" loading="lazy" />
+<div class="card" [routerLink]="'/details/' + Product.id ">
+  <img class="card-image" [src]="Product.product.imgUrl" alt="" loading="lazy" />
   <article>
     <div class="card-title">
-      <p>{{ Name }}</p>
+      <p>{{ Product.product.name }}</p>
     </div>
     <span>
-      <p class="price">{{ Price }}</p>
+      <p class="price">{{ Product.product.price }}</p>
     </span>
   </article>
 </div>

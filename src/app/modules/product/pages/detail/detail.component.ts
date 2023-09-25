@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import { IShop } from 'src/app/shared/model/auction.model';
+import { AuctionService } from 'src/app/shared/services/auction.service';
 
 @Component({
   selector: 'app-detail',
@@ -6,13 +9,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detail.component.scss'],
 })
 export class DetailComponent implements OnInit {
- productstatus:string = "Out of Stock";
   descriptiontoggle: boolean = false;
   listingstoggle: boolean = false;
   statustoggle: boolean = false;
   OrderNo: number = 1;
   isSaved: boolean = false;
-  constructor() {}
+  Products: IShop[] = [];
+  ProductData!: IShop;
+  SimilarCollection!:IShop[]
+  id!: number;
+  constructor(private route: ActivatedRoute,
+    private ProductService: AuctionService) {}
+  ngOnInit(): void {
+
+    this.route.paramMap.subscribe((Params: ParamMap) => {
+      this.id = +Params.get('id')!;
+    });
+
+    this.ProductService.getAuctionData().subscribe((data) => {
+      this.Products = data.shop;
+      this.ProductData = this.Products.find((item) => item.id === this.id)!
+      this.SimilarCollection= this.Products.filter((item) =>item.product.category === this.ProductData.product.category)
+      console.table(this.Products);
+    })
+
+  }
 
   displayListings() {
     if (!this.listingstoggle) {
@@ -55,6 +76,4 @@ export class DetailComponent implements OnInit {
       path.style.stroke = '#bcb7b7';
     }
   }
-
-  ngOnInit(): void {}
 }

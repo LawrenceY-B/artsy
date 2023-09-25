@@ -94,3 +94,82 @@
   }
 }
 }
+@media only screen and (max-width: 768px) {
+  
+  .container {
+    padding: 10px;
+    height: 60vh;
+
+    .img-container{
+      width: 95%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    
+    h2 {
+      display: none;
+    }
+    figure {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 90%;
+      overflow: hidden;
+      position: relative;
+  
+      img {
+        object-fit: cover;
+        object-position: center;
+        // height: %;
+        width: 100%;
+      }
+      .caption {
+        padding:5px;
+        height: 100%;
+        background-color: #202020cb;
+        backdrop-filter: blur(1px);
+     
+        gap: 10px;
+      
+        justify-content: center;
+  
+        h6 {
+          width: 100%;
+          font-size: 16px;
+        }
+        span {
+          gap: 20px;
+          align-items: center;
+          display: inline-flex;
+        }
+        .start {
+          font-family: "Satoshi Light";
+        }
+        h3 {
+          font-family: "Times New Roman", Times, serif;
+          font-size: 32px;
+        }
+        div {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          text-align: justify;
+          span {
+            width: 100%;
+            align-self: flex-end;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            p{
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  }
+}
