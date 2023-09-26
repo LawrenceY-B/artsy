@@ -1,0 +1,34 @@
+section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    box-sizing: content-box;
+}
+nav{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8px;
+    p{
+        font-size: 14px;
+        color: #7B7B7B;
+        text-decoration: none;
+        border-bottom: 2px solid #cbcbcb;
+        text-align: center;
+        transition: all 0.3s;
+        margin: 0;
+        width: 100%;
+        &:hover{
+            color: #020307;
+        }
+    }
+    .active{
+        font-family: "Satoshi Bold";
+        color: #020307;
+        text-decoration: none;
+        padding-bottom: 6px; 
+        border-bottom: 2px solid #000; 
+
+    }
+}

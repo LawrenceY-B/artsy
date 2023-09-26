@@ -16,27 +16,29 @@ export class DetailComponent implements OnInit {
   isSaved: boolean = false;
   Products: IShop[] = [];
   ProductData!: IShop;
-  SimilarCollection!:IShop[]
+  SimilarCollection!: IShop[];
   displayedCards: IShop[] = [];
 
   id!: number;
-  constructor(private route: ActivatedRoute,
-    private ProductService: AuctionService) {}
+  constructor(
+    private route: ActivatedRoute,
+    private ProductService: AuctionService
+  ) {}
   ngOnInit(): void {
-
     this.route.paramMap.subscribe((Params: ParamMap) => {
       this.id = +Params.get('id')!;
     });
 
     this.ProductService.getAuctionData().subscribe((data) => {
       this.Products = data.shop;
-      this.ProductData = this.Products.find((item) => item.id === this.id)!
-      this.SimilarCollection= this.Products.filter((item) =>item.product.category === this.ProductData.product.category)
+      this.ProductData = this.Products.find((item) => item.id === this.id)!;
+      this.SimilarCollection = this.Products.filter(
+        (item) => item.product.category === this.ProductData.product.category
+      );
       this.updateDisplayedCards();
 
       console.table(this.Products);
-    })
-
+    });
   }
 
   displayListings() {
@@ -80,27 +82,64 @@ export class DetailComponent implements OnInit {
       path.style.stroke = '#bcb7b7';
     }
   }
-  currentSlide=0
+  currentSlide = 0;
   cardsPerPage = 3;
 
   onPreviousClick() {
-    this.currentSlide = (this.currentSlide - 1 + this.SimilarCollection.length) % this.SimilarCollection.length;
+    this.currentSlide =
+      (this.currentSlide - 1 + this.SimilarCollection.length) %
+      this.SimilarCollection.length;
     console.log('previous clicked, new current slide is: ', this.currentSlide);
-    this.updateDisplayedCards()
+    this.updateDisplayedCards();
   }
-  
+
   onNextClick() {
     this.currentSlide = (this.currentSlide + 1) % this.SimilarCollection.length;
     console.log('next clicked, new current slide is: ', this.currentSlide);
-    this.updateDisplayedCards()
+    this.updateDisplayedCards();
   }
-  
+
   updateDisplayedCards() {
     this.displayedCards = [];
-    for (let i = this.currentSlide; i < this.currentSlide + this.cardsPerPage; i++) {
+    for (
+      let i = this.currentSlide;
+      i < this.currentSlide + this.cardsPerPage;
+      i++
+    ) {
       const index = i % this.SimilarCollection.length;
       this.displayedCards.push(this.SimilarCollection[index]);
     }
-    
+  }
+  addtocart(cartItem: IShop, style: HTMLButtonElement) {
+    let cart: any = [];
+    if (localStorage.getItem('cart')) {
+      cart = JSON.parse(localStorage.getItem('cart')!);
+    }
+    cart.push(cartItem);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    console.log(cart);
+
+    const image = document.createElement('img');
+
+    image.src = 'assets/svgs/next.svg';
+
+    image.alt = 'Image Description';
+    image.style.width = '20px';
+    image.style.height = '20px';
+
+    style.innerHTML = 'Added to Cart';
+    style.style.backgroundColor = '#FFF';
+    style.style.color = '#000';
+    style.style.border = '1px solid black';
+    style.style.transition = 'all 0.5s ease-in-out';
+    setTimeout(() => {
+      style.innerText = 'Add to Cart';
+      style.style.backgroundColor = '#000';
+      style.style.color = '#FFF';
+      style.appendChild(image);
+
+      //speak to Botchway
+      location.reload();
+    }, 3000);
   }
 }

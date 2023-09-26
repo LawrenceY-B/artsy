@@ -24,7 +24,9 @@ export interface IShop {
   id: number;
   product: {
     name: string;
-    price: string;
+    price: number;
+    unitPrice: number;
+    quantity: number;
     creator: {
       name: string;
       socials: {

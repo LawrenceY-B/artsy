@@ -133,6 +133,8 @@
       "product": {
         "name": "Mystical Twilight Symphony",
         "price": 10.99,
+        "unitPrice": 10.99,
+        "quantity": 1,
         "creator": {
           "name": "Julius Smith",
           "socials": {
@@ -162,6 +164,8 @@
       "product": {
         "name": "Harmony in Hues",
         "price": 20.99,
+        "unitPrice": 20.99,
+        "quantity": 1,
         "creator": {
           "name": "Alicia Keys",
           "socials": {
@@ -191,6 +195,8 @@
       "product": {
         "name": "Scenic Oasis",
         "price": 49.99,
+        "unitPrice": 49.99,
+        "quantity": 1,
         "creator": {
           "name": "Olivia Parker",
           "socials": {
@@ -221,6 +227,8 @@
       "product": {
         "name": "The Literary Voyage",
         "price": 29.99,
+        "unitPrice": 29.99,
+        "quantity": 1,
         "creator": {
           "name": "Eleanor Bennett",
           "socials": {
@@ -251,6 +259,8 @@
       "product": {
         "name": "Haute Couture Elegance",
         "price": 399.99,
+        "unitPrice": 399.99,
+        "quantity": 1,
         "creator": {
           "name": "Sophie Laurent",
           "socials": {
@@ -281,6 +291,8 @@
       "product": {
         "name": "Majestic Wilderness",
         "price": 79.99,
+        "unitPrice": 79.99,
+        "quantity": 1,
         "creator": {
           "name": "David Anderson",
           "socials": {
@@ -310,7 +322,9 @@
       "id": 7,
       "product": {
         "name": "Sculpted Harmony",
-        "price": 129.99,
+        "price": 29.99,
+        "unitPrice": 29.99,
+        "quantity": 1,
         "creator": {
           "name": "Lucia Rodriguez",
           "socials": {
@@ -341,6 +355,8 @@
       "product": {
         "name": "Ink and Imagination",
         "price": 19.99,
+        "unitPrice": 19.99,
+        "quantity": 1,
         "creator": {
           "name": "Liam Wilson",
           "socials": {
@@ -371,6 +387,8 @@
       "product": {
         "name": "Ethereal Beauty",
         "price": 69.99,
+        "unitPrice": 69.99,
+        "quantity": 1,
         "creator": {
           "name": "Aria Mitchell",
           "socials": {
@@ -401,6 +419,8 @@
       "product": {
         "name": "Aqua Serenity",
         "price": 34.99,
+        "unitPrice": 34.99,
+        "quantity": 1,
         "creator": {
           "name": "Natalie Roberts",
           "socials": {
@@ -430,6 +450,8 @@
       "product": {
         "name": "Rhythmic Expressions",
         "price": 59.99,
+        "unitPrice": 59.99,
+        "quantity": 1,
         "creator": {
           "name": "Carlos Hernandez",
           "socials": {
@@ -454,12 +476,14 @@
       },
       "status": "In Stock"
     },
-    
+
     {
       "id": 12,
       "product": {
         "name": "Urban Explorer's Guide",
         "price": 24.99,
+        "unitPrice": 24.99,
+        "quantity": 1,
         "creator": {
           "name": "Elena Russo",
           "socials": {
@@ -484,6 +508,5 @@
       },
       "status": "In Stock"
     }
-    
   ]
 }

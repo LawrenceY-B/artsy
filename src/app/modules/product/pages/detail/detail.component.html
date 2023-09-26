@@ -1,7 +1,7 @@
 <section>
   <div class="breadcrumbs">
     <p routerLink="">Home/</p>
-    <p routerLink="/products">MarketPlace/</p>
+    <p routerLink="/home/products">MarketPlace/</p>
     <p class="current">ProductName</p>
   </div>
 
@@ -29,7 +29,7 @@
         <img src="assets/svgs/minus.svg" alt="" (click)="remove()" />
       </span>
       <span class="cartContainer">
-        <button class="cart">
+        <button class="cart" (click)="addtocart(ProductData, btn)" #btn>
           Add to Cart <img src="assets/svgs/next.svg" alt="" />
         </button>
         <svg

@@ -1,0 +1,132 @@
+section {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  margin-top: 30px;
+  .cartSection {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 8px 0px;
+      border-top: 1px solid #cbcbcb;
+      gap: 30px;
+      .imgcontainer {
+        align-self: flex-end;
+        img {
+          width: 200px;
+          height: 160px;
+          object-fit: cover;
+          object-position: center;
+          border-radius: 5px;
+        }
+      }
+      .detailscontainer {
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        .leftSide {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          h4 {
+            font-size: 22px;
+          }
+          .creator {
+            font-size: 18px;
+            color: #7b7b7b;
+          }
+          span {
+            display: flex;
+            .dimensions {
+              color: #7b7b7b;
+              margin-right: 5px;
+            }
+          }
+          .Count {
+            font-size: 25px;
+            display: flex;
+            gap: 10px;
+            img {
+              width: 20px;
+              height: 20px;
+              object-fit: contain;
+              object-position: center;
+            }
+          }
+        }
+        .rightSide {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          p {
+            font-size: 20px;
+            font-family: "Satoshi Bold";
+          }
+          img {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+            object-position: center;
+          }
+        }
+      }
+    }
+  }
+  .checkoutSection {
+    border-top: 1px solid #cbcbcb;
+    padding: 20px 0px;
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    .checkoutbtn {
+      padding: 10px 12px;
+      border-radius: 5px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    .shopping {
+      width: fit-content;
+      text-decoration: none;
+      border-bottom: 2px solid #000;
+    }
+    &__left {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      gap: 30px;
+      align-items: center;
+
+    }
+    &__right {
+      display: flex;
+      flex-direction: column;
+    justify-content: space-evenly;
+      width: 50%;
+
+     span{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        
+     }
+    }
+    &__headers{
+        font-size: 18px;
+        color: #7b7b7b;
+    }
+  }
+}

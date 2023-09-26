@@ -1,0 +1,43 @@
+<section>
+  <div class="cartSection" *ngFor="let cart of CartItems">
+    <div class="card-container">
+        <div class="imgcontainer"><img [src]="cart.product.imgUrl" alt=""></div>
+        <div class="detailscontainer">
+            <div class="leftSide">
+                <h4>{{cart.product.name}}</h4>
+                <p class="creator">{{cart.product.creator.name}}</p>
+                <span><p class="dimensions" >Size :</p> <p>{{cart.listings.dimensions}}</p></span>
+                <span class="Count">
+                    <img src="assets/svgs/plus.svg" alt="" (click)="add(cart)" />
+                    <p>{{cart.product.quantity}}</p>
+                    <img src="assets/svgs/minus.svg" alt="" (click)="remove(cart)" />
+                  </span>
+            </div>
+            <div class="rightSide"> 
+                <img src="assets/svgs/trash-can-outline.svg" alt="" >
+                <p>$ {{cart.product.price}}</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="checkoutSection">
+    <div class="checkoutSection__left">
+      <button class="checkoutbtn">Proceed to Checkout</button>
+      <p class="shopping">Continue shopping</p>
+    </div>
+    <div class="checkoutSection__right">
+      <span>
+        <p class="checkoutSection__headers">Products in Cart</p>
+        <p>{{ count }} items</p>
+      </span>
+      <span>
+        <p class="checkoutSection__headers">Shipping</p>
+        <p>$ {{ count }}</p> 
+    </span>
+      <span>
+        <p class="checkoutSection__headers">Total</p>
+        <p>$ {{Total}}</p>
+      </span>
+    </div>
+  </div>
+</section>

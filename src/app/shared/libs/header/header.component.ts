@@ -10,16 +10,19 @@ import { gsap } from 'gsap';
 export class HeaderComponent implements AfterViewInit {
   @ViewChild('header')
   header!: ElementRef;
+  IteminCart: boolean = false;
   navigation = [
     { name: "Home", tag: "home" },
-    { name: "Marketplace", tag: "products" },
+    { name: "Marketplace", tag: "home/products" },
     { name: "Auction", tag: "auction" },
     { name: "Drop", tag: "auction/drop" },
 
 
   ]
   menuOpen = false;
-
+  constructor() { 
+    localStorage.getItem('cart') ? this.IteminCart = true : this.IteminCart = false;
+  }
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
@@ -32,6 +35,8 @@ export class HeaderComponent implements AfterViewInit {
       delay:0.2,
     })
   }
+  
+
   
 
 }

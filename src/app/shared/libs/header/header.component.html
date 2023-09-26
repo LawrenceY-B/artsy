@@ -23,9 +23,16 @@
   </div>
 </div>
   <div class="icons">
-    <img src="/assets/svgs/Search.svg" alt="search" />
-    <img src="/assets/svgs/cart-outline.svg" alt="cart"  />
-    <img src="/assets/svgs/bell-outline.svg" alt="notification" class="notification"/>
+    <span>
+      <img src="/assets/svgs/Search.svg" alt="search" />
+    </span>
+    <span class="cart" routerLink="/checkout">
+      <div class="dot" *ngIf="IteminCart"></div>
+      <img src="/assets/svgs/cart-outline.svg" alt="cart"  />
+    </span>
+    <span>
+      <img src="/assets/svgs/bell-outline.svg" alt="notification" class="notification"/>
+    </span>
 
   </div>
 </header>

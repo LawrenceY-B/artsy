@@ -15,6 +15,18 @@ height: 10vh;
   align-items: center;
   width: 70%;
 }
+.cart{
+  position: relative;
+  .dot{
+    background-color: #ae0000;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    right: -5px;
+    top: -3px;
+  }
+}
 h1{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
     font-size: 32px;
