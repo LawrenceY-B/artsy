@@ -10,6 +10,8 @@ export class ShoppingCartComponent implements OnInit {
 CartItems: IShop[] = [];
 count: number = 0
 Total: number = 0;
+@Output() switchtoCheckoutEvent = new EventEmitter();
+  tempresults: IShop[] = [];
 
 
   constructor() {
@@ -44,6 +46,28 @@ Total: number = 0;
       this.getTotal();
     }
     
+  }
+  switchtoCheckout(status:string) {
+    this.getCartItems();
+    localStorage.setItem('cart', JSON.stringify(this.CartItems));
+    if(this.CartItems.length>0){
+      this.switchtoCheckoutEvent.emit(status);
+    }
+    
+    
+
+  }
+  removeItem(cart:IShop) {
+
+    const itemIndex = this.CartItems.indexOf(cart);
+    if (itemIndex > -1) {
+      //apparently i have to splice to remove, failed miserably in thinking i could change how pop works
+      
+      this.tempresults.splice(itemIndex, 1);
+    }
+    this.tempresults=this.CartItems
+    this.count = this.tempresults.length;
+    localStorage.setItem('cart', JSON.stringify(this.tempresults));
   }
 
 }

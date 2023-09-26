@@ -20,7 +20,7 @@ export class ProductpageComponent implements OnInit {
     this.productService.getAuctionData().subscribe((data) => {
       this.Product = data.shop;
       this.Total = this.Product.length;
-      this.MainView = this.Product.slice(0, 6);
+      this.MainView = this.Product.slice(0, 9);
     });
   }
 

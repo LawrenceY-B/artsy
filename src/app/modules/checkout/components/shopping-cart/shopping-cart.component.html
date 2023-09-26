@@ -1,6 +1,13 @@
 <section>
+  <div *ngIf="count == 0" class="empty">
+    <div>
+      <img src="assets/svgs/empty.svg" alt="empty-cart" />
+      <p>Oops.... looks like your cart is empty</p>
+      <button class="emptycheckoutbtn" routerLink="/home/products">Continue Shopping</button>
+    </div>
+  </div>
   <div class="cartSection" *ngFor="let cart of CartItems">
-    <div class="card-container">
+    <div class="card-container" >
         <div class="imgcontainer"><img [src]="cart.product.imgUrl" alt=""></div>
         <div class="detailscontainer">
             <div class="leftSide">
@@ -14,16 +21,16 @@
                   </span>
             </div>
             <div class="rightSide"> 
-                <img src="assets/svgs/trash-can-outline.svg" alt="" >
+               <img src="assets/svgs/trash-can-outline.svg" alt="delete" (click)="removeItem(cart)" >
                 <p>$ {{cart.product.price}}</p>
             </div>
         </div>
     </div>
   </div>
-  <div class="checkoutSection">
+  <div class="checkoutSection" *ngIf="count > 0">
     <div class="checkoutSection__left">
-      <button class="checkoutbtn">Proceed to Checkout</button>
-      <p class="shopping">Continue shopping</p>
+      <button class="checkoutbtn" (click)="switchtoCheckout('Details')">Proceed to Checkout</button>
+      <p class="shopping" routerLink="/home/products">Continue shopping</p>
     </div>
     <div class="checkoutSection__right">
       <span>

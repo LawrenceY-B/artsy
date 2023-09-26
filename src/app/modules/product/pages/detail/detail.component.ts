@@ -139,7 +139,7 @@ export class DetailComponent implements OnInit {
       style.appendChild(image);
 
       //speak to Botchway
-      location.reload();
+      // location.reload();
     }, 3000);
   }
 }

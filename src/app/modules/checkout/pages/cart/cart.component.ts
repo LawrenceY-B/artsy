@@ -12,5 +12,19 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  receiveCheckout(checkout: string){
+    if(checkout === 'Details'){
+      this.status = 'Details';
+    }
+  }
+  switchtoDetails(){
+    this.status = 'Details';
+  }
+  switchtoCart(){
+    this.status = 'Cart';
+  }
+  switchtoPayment(){
+    this.status = 'Payment';
+  }
 
 }

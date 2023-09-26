@@ -1,10 +1,10 @@
 <section>
     <nav>
-        <p  [class.active]="status === 'Cart'">Cart</p>
-        <p [class.active]="status === 'Details'">Details</p>
-        <p  [class.active]="status === 'Payment'">Payment</p>
+        <p  [class.active]="status === 'Cart'" (click)="switchtoCart()">Cart</p>
+        <p [class.active]="status === 'Details'" (click)="switchtoDetails()" >Details</p>
+        <p  [class.active]="status === 'Payment'" (click)="switchtoPayment()">Payment</p>
     </nav>
-    <app-shopping-cart *ngIf="status ==='Cart'"></app-shopping-cart>
+    <app-shopping-cart *ngIf="status ==='Cart'" (switchtoCheckoutEvent)="receiveCheckout($event)"></app-shopping-cart>
     <app-shipping-details *ngIf="status ==='Details'"></app-shipping-details>
     <app-payment-details *ngIf="status ==='Payment'"></app-payment-details>
 </section>
