@@ -217,3 +217,77 @@ section {
       background-position: 0% 50%
   }
 }
+
+@media only screen and (max-width:768px){
+  section{
+    .cartSection{
+      flex-direction: column;
+      gap: 20px;
+      .card-container{
+        flex-direction: row;
+        gap: 10px;
+        .imgcontainer{
+          align-self: center;
+          img{
+            width: 140px;
+            height: 140px;
+          }
+        }
+        .detailscontainer{
+          .leftSide{
+            width: 50%;
+            h4{
+              font-size: 14px;
+            }
+            .creator{
+              font-size: 12px;
+            }
+
+            .size{
+              display: none;
+            }
+            .Count{
+              justify-content: space-between;
+              font-size: 16px;
+              align-items: center;
+              p{
+                margin: 0px;
+              }
+              img{
+                width: 15px;
+                height: 15px;
+              }
+            }
+          }
+          .rightSide{
+            width: 50%;
+            align-items: center;
+            p{
+              margin: 0;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    .checkoutSection{
+      flex-direction: column;
+      gap: 20px;
+      .checkoutbtn{
+        width: 100%;
+      }
+      .shopping{
+        width: 100%;
+        text-align: center;
+      }
+      &__left{
+        width: 100%;
+        align-items: center;
+      }
+      &__right{
+        width: 100%;
+        align-items: center;
+      }
+    }
+  }
+}
