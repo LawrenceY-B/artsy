@@ -20,7 +20,7 @@ Total: number = 0;
 
   ngOnInit(): void {
    this.getCartItems();
-  }
+  }  
   getCartItems(){
     this.CartItems = JSON.parse(localStorage.getItem('cart')!) || [];
     this.count = this.CartItems.length;
@@ -57,7 +57,7 @@ Total: number = 0;
     
 
   }
-  removeItem(cart:IShop) {
+  removeItem(cart:IShop) {   
 
     const itemIndex = this.CartItems.indexOf(cart);
     if (itemIndex > -1) {
@@ -68,6 +68,7 @@ Total: number = 0;
     this.tempresults=this.CartItems
     this.count = this.tempresults.length;
     localStorage.setItem('cart', JSON.stringify(this.tempresults));
+    this.getTotal()
   }
 
 }
