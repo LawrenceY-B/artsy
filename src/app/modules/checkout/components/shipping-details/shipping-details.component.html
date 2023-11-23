@@ -1,1 +1,101 @@
-<p>shipping-details works!</p>
+<main>
+  <section class="form-field">
+    <div class="inputBox">
+      <label for="Email"> Your Email </label>
+      <input type="email" id="Email" />
+      <span>
+        <input type="checkbox" />
+        <p>Get updates about new drops & exclusive offers</p>
+      </span>
+    </div>
+    <div class="inputBox">
+      <label for="Name"> Your full name </label>
+      <input type="text" id="Name" />
+    </div>
+    <!-- <div class="inputBox">
+      <label for="Wallet"> Choose your wallet</label>
+      <select name="" id="">
+        <option value="" hidden>Select your wallet</option>
+
+        <option value="MTN">MTN</option>
+        <option value="Vodafone">Vodafone</option>
+      </select>
+    </div> -->
+    <div class="inputBox">
+      <label for="City"> City</label>
+      <select name="" id="">
+        <option value="" hidden>Select Your City</option>
+
+        <option value="MTN">Accra</option>
+        <option value="Vodafone">Kumasi</option>
+      </select>
+    </div>
+    <div class="inputBox2">
+      <span>
+        <label for="Country"> Country</label>
+<select>
+    <option value="" hidden>Select Your Country</option>
+    <option value="Ghana">Ghana</option>
+    <option value="Nigeria">Nigeria</option>
+</select>      </span>
+      <span>
+        <label for="PostalCode"> Postal Code</label>
+        <input type="text" id="PostalCode" placeholder="GM - *** - ****" />
+      </span>
+    </div>
+    <div class="inputBox">
+      <label for="Phonenumber"> Phone number</label>
+      <input type="text" id="Phonenumber" placeholder="054 *** ****" />
+    </div>
+    <div class="inputBox">
+        <button class="checkoutbtn" (click)="switchtoPayment('Payment')">
+          Proceed to Payment
+        </button>
+      </div>
+  </section>
+  <section class="cart-box">
+    <div class="cartSection" *ngFor="let cart of CartItems">
+      <div class="card-container">
+        <div class="imgcontainer">
+          <img [src]="cart.product.imgUrl" alt="" />
+        </div>
+        <div class="detailscontainer">
+          <div class="leftSide">
+            <h4>{{ cart.product.name }}</h4>
+            <p class="creator">{{ cart.product.creator.name }}</p>
+            <!-- <span class="size"><p class="dimensions" >Size :</p> <p>{{cart.listings.dimensions}}</p></span> -->
+            <span class="Count">
+              <img src="assets/svgs/plus.svg" alt="" (click)="add(cart)" />
+              <p>{{ cart.product.quantity }}</p>
+              <img src="assets/svgs/minus.svg" alt="" (click)="remove(cart)" />
+            </span>
+          </div>
+          <div class="rightSide">
+            <img
+              src="assets/svgs/trash-can-outline.svg"
+              alt="delete"
+              (click)="removeItem(cart)"
+            />
+            <p>$ {{ cart.product.price }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="checkoutSection" *ngIf="count > 0">
+      <div class="checkoutSection__right">
+        <span>
+          <p class="checkoutSection__headers">Products in Cart</p>
+          <p>{{ count }} items</p>
+        </span>
+        <span>
+          <p class="checkoutSection__headers">Shipping</p>
+          <p>$ {{ count }}</p>
+        </span>
+        <span>
+          <p class="checkoutSection__headers">Total</p>
+          <p>$ {{ Total }}</p>
+        </span>
+      </div>
+    </div>
+  </section>
+</main>

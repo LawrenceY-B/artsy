@@ -19,6 +19,7 @@ nav{
         transition: all 0.3s;
         margin: 0;
         width: 100%;
+        cursor: not-allowed;
         &:hover{
             color: #020307;
         }

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
   status: string = 'Cart';
-  
+
   constructor() { }
 
   ngOnInit(): void {
@@ -17,14 +17,21 @@ export class CartComponent implements OnInit {
       this.status = 'Details';
     }
   }
+  receivePayment(payment: string){
+    if(payment === 'Payment'){
+      this.status = 'Payment';
+    }
+  }
   switchtoDetails(){
     this.status = 'Details';
+
   }
   switchtoCart(){
     this.status = 'Cart';
   }
   switchtoPayment(){
     this.status = 'Payment';
+
   }
 
 }
