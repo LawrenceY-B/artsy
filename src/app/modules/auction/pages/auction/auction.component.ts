@@ -32,6 +32,7 @@ export class AuctionPageComponent implements OnInit {
   cardsPerPage = 3;
   displayedCards: IAuctionData[] = [];
   highlight:number=0
+  currentIndicator:number=0
 
   constructor(private auction: AuctionService) {}
   
@@ -68,6 +69,12 @@ export class AuctionPageComponent implements OnInit {
       const index = i % this.LiveAuction.length;
       this.displayedCards.push(this.LiveAuction[index]);
     }
+    this.currentIndicator = this.currentSlide;
     
   }
+  goToSlide(index: number) {
+    this.currentSlide = index;
+    this.updateDisplayedCards();
+  }
+  
 }

@@ -20,10 +20,17 @@
         (click)="onNextClick()"
       />
       <div *ngFor="let items of displayedCards; let i = index">
-        <div class="carousel" [ngClass]="{'current-slide': i === highlight +1}">
+        <div class="carousel">
           <app-livecards [result]="items"></app-livecards>
         </div>
       </div>
+    </div>
+    <div class="carousel-indicators">
+      <button
+        *ngFor="let indicator of LiveAuction; let i = index"
+        [class.active]="i === currentIndicator"
+        (click)="goToSlide(i)"
+      ></button>
     </div>
   </div>
   <div class="creators">

@@ -84,6 +84,31 @@ section {
       justify-content: space-around;
     }
   }
+  .carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    display: flex;
+    gap: 5px;
+  
+    button {
+      width: 8px;
+      height: 8px;
+      border: none;
+      border-radius: 100px;
+     
+      // margin: 0 5px;
+      cursor: pointer;
+      background-color: #d8d8d8;
+  
+      &.active {
+        width: 30px;
+        border-radius: 10px;
+        background-color: #4c4c4c;
+      }
+    }
+  }
+  
 }
 @media only screen and (max-width: 768px) {
   section {
